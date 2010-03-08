@@ -1,0 +1,11 @@
+<chapter id="modelling-patterns">
+  <title>Modelling Patterns</title>
+  <chapterinfo>
+  <abstract>
+  <para>This chapter introduces a collection of patterns that all relate to RDF modelling</para>
+  </abstract>
+  </chapterinfo>
+
+&preferred-label;
+&index-resources;
+</chapter>

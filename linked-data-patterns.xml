@@ -1,0 +1,35 @@
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd" [
+  
+  <!ENTITY identifier-patterns SYSTEM "identifier-patterns.xml">
+    <!ENTITY patterned-uris SYSTEM "patterned-uris.xml">
+    <!ENTITY natural-keys SYSTEM "natural-keys.xml">
+    <!ENTITY hierarchical-uris SYSTEM "hierarchical-uris.xml">
+    <!ENTITY literal-keys SYSTEM "literal-keys.xml">
+    <!ENTITY shared-keys SYSTEM "shared-keys.xml">
+
+  <!ENTITY modelling-patterns SYSTEM "modelling-patterns.xml">
+    <!ENTITY preferred-label SYSTEM "preferred-label.xml">
+    <!ENTITY index-resources SYSTEM "index-resources.xml">
+
+  <!ENTITY publishing-patterns SYSTEM "publishing-patterns.xml">
+    <!ENTITY autodiscovery SYSTEM "autodiscovery.xml">
+    <!ENTITY primary-topic-autodiscovery SYSTEM "primary-topic-autodiscovery.xml">
+    <!ENTITY edit-trail SYSTEM "edit-trail.xml">
+
+  <!ENTITY application-patterns SYSTEM "application-patterns.xml">
+    <!ENTITY composite-descriptions SYSTEM "composite-descriptions.xml">
+]>
+<book>
+<bookinfo>
+  <title>Linked Data Patterns</title>
+  <subtitle>A pattern catalogue for publishing, consuming and processing Linked Data</subtitle>
+  <author><firstname>Leigh</firstname><surname>Dodds</surname></author>
+  <author><firstname>Ian</firstname><surname>Davis</surname></author>
+</bookinfo>
+
+&identifier-patterns;
+&modelling-patterns;
+&publishing-patterns;
+&application-patterns;
+
+</book>	

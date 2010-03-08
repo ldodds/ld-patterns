@@ -1,0 +1,28 @@
+<sect1>
+  <title>Template</title>
+  <para> 
+   <emphasis>Problem</emphasis>
+  </para>
+
+  <sect2><title>Context</title>
+  <para>Context</para>
+  </sect2>
+
+  <sect2><title>Solution</title>
+  <para>Solution</para>
+  </sect2>
+
+  <sect2><title>Rationale</title>
+  <para>Rationale</para>
+  </sect2>
+
+  <sect2><title>Example(s)</title>
+  <para>Example</para>
+  </sect2>
+
+  <sect2><title>Related</title>
+  <itemizedlist>
+  <listitem><link linkend="x">X</link></listitem>
+  </itemizedlist>
+  </sect2>
+</sect1>

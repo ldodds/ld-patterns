@@ -1,0 +1,36 @@
+<sect1 id="primary-topic-autodiscovery">
+  <title>Primary Topic Autodiscovery</title>
+  <para> 
+   <emphasis>How can people identify the principal subject of a given web page? </emphasis>
+  </para>
+
+  <sect2><title>Context</title>
+  <para>Often a web page is concerned with a particular physical object or other resource. To assist discovery and aggregation of pages about particular topics the publisher wants to indicate the URI of this resource.</para>
+  </sect2>
+
+  <sect2><title>Solution</title>
+  <para>When publishing a web page include a link element in the head of the web page pointing to the URI of the page's primary topic. Use a rel attribute value of "primarytopic".</para>
+<para>
+<code>
+<![CDATA[
+<link rel="primarytopic" href="http://dbpedia.org/resource/London"/>
+]]>
+</code></para>
+  </sect2>
+
+  <sect2><title>Rationale</title>
+  <para>Many pages on the Web are explicitly about a single subject. Examples include Amazon product pages, Wikipedia entries, blogs and company home pages. Without an explicit link, content aggregators must resort to heuristic inference of the topic which is prone to classification error. Often the original publisher knows the specific topic and would like to provide this as a hint to aggregators and other content consumers.</para>
+<para>
+Even when the page is about several topics there can be a single primary topic that can be linked to directly.</para>
+  </sect2>
+
+  <sect2><title>Example(s)</title>
+  <para>Associating a wikipedia page with the equivalent dbpedia resource.</para>
+  </sect2>
+
+  <sect2><title>Related</title>
+  <itemizedlist>
+  <listitem><link linkend="autodiscovery">Autodiscovery</link></listitem>
+  </itemizedlist>
+  </sect2>
+</sect1>

@@ -1,0 +1,42 @@
+<sect1 id="patterned-uris">
+  <title>Patterned URIs</title>
+  <para> 
+   <emphasis>How can be create more hackable, human-readable URIs?</emphasis>
+  </para>
+
+  <sect2><title>Context</title>
+  <para>Clean, clear URIs can be easier to remember and easier for developers to work with. This is especially true if the URIs can be algorithmically constructed or follow a common pattern. This allows URIs to be constructed or hacked in order to create new entry points into the dataset, e.g. determining the URI for a collection of similar resources based on knowledge of a single example URI.
+</para>
+  </sect2>
+
+  <sect2><title>Solution</title>
+  <para>Create URIs that follow a simple naming pattern. For applications generating Linked Data one technique for building patterned URIs is to use the pluralized class name as part of the URI pattern.
+</para>
+  <para>For example if an application will be publishing data about book resources, which are modelled as the rdf:type ex:Book. One might construct URIs of the form:
+</para>
+<para><code>/books/12345</code></para>
+<para>Where /books is the base part of the URI indicating "the collection of books", and the 12345 is an identifier for an individual book.
+</para>
+<para>If multiple classes share a common base class, then it is also possible to use the name of the common base class, rather than generating separate URIs for each derived type</para>
+
+  </sect2>
+
+  <sect2><title>Rationale</title>
+  <para>There are clear benefits from having human-readable, hackable URIs. This solution achieves that by ensuring the same naming scheme that applies to the underlying data also applies to the URIs. This provides a clear relation between the URI and the type of thing that it describes.
+</para>
+  </sect2>
+
+  <sect2><title>Example(s)</title>
+  <para>The BBC website uses /programmes to group together URIs that relate to series, brands and episodes, all of which are subclasses of the rdf:type po:Programme</para>
+  </sect2>
+
+  <sect2><title>Related</title>
+  <itemizedlist>
+  <listitem><link linkend="hierarchical-uris">Hierarchical URIs</link></listitem>
+  <listitem><link linkend="natural-keys">Natural Keys</link></listitem>
+  </itemizedlist>
+  </sect2>
+</sect1>
+
+
+

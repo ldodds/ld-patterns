@@ -1,0 +1,10 @@
+<chapter id="application-patterns">
+  <title>Application Patterns</title>
+  <chapterinfo>
+  <abstract>
+  <para>This chapter introduces a collection of patterns that all relate to the building of applications over RDF and/or Linked Data</para>
+  </abstract>
+  </chapterinfo>
+
+&composite-descriptions;
+</chapter>

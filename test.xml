@@ -1,0 +1,15 @@
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd" [
+  <!ENTITY datamgt SYSTEM "dataManagement.xml">
+  <!ENTITY edittrail SYSTEM "editTrail.xml">
+]>
+<book>
+<bookinfo>
+  <title>Linked Data Patterns</title>
+  <subtitle>A pattern catalogue for publishing, consuming and processing Linked Data</subtitle>
+  <author><firstname>Leigh</firstname><surname>Dodds</surname></author>
+  <author><firstname>Ian</firstname><surname>Davis</surname></author>
+</bookinfo>
+
+&datamgt;
+
+</book>	

@@ -1,0 +1,14 @@
+<chapter id="identifier-patterns">
+  <title>Identifier Patterns</title>
+  <chapterinfo>
+  <abstract>
+  <para>This chapter introduces a collection of patterns that all relate to the generation, assignment and creation of web-scale identifiers (URIs) for Linked Data.</para>
+  </abstract>
+  </chapterinfo>
+
+&patterned-uris;
+&natural-keys;
+&hierarchical-uris;
+&literal-keys;
+&shared-keys;
+</chapter>

@@ -1,0 +1,12 @@
+<chapter id="publishing-patterns">
+  <title>Publishing Patterns</title>
+  <chapterinfo>
+  <abstract>
+  <para>This chapter introduces a collection of patterns that all relate to the publishing of Linked Data. In some cases these patterns provide guidance on additional aspects of modelling, in others they describe approaches to surfacing data on the web.</para>
+  </abstract>
+  </chapterinfo>
+
+&autodiscovery;
+&primary-topic-autodiscovery;
+&edit-trail;
+</chapter>
