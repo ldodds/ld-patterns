@@ -7,6 +7,7 @@ chunk:
 		--stringparam chunk.first.sections "1" \
 		--stringparam use.id.as.filename "1" \
 		--stringparam toc.section.depth "1" \
+		--stringparam html.stylesheet "../css/style.css" \
         	-o index.html $(STYLESHEETS_DIR)/xhtml/chunk.xsl src/linked-data-patterns.xml
 
 html:

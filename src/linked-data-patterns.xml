@@ -25,6 +25,11 @@
   <subtitle>A pattern catalogue for publishing, consuming and processing Linked Data</subtitle>
   <author><firstname>Leigh</firstname><surname>Dodds</surname></author>
   <author><firstname>Ian</firstname><surname>Davis</surname></author>
+  <abstract>
+  <para>This book lives at <ulink linkend="http://patterns.dataincubator.org">http://patterns.dataincubator.org</ulink>. Check that website for the latest version.</para>
+  <para>This work is licenced under the Creative Commons Attribution 2.0 UK: England &amp; Wales License. To view a copy of this licence, visit <ulink linkend="http://creativecommons.org/licenses/by/2.0/uk/">http://creativecommons.org/licenses/by/2.0/uk/</ulink>.
+  </para>
+  </abstract>
 </bookinfo>
 
 &identifier-patterns;
