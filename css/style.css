@@ -1,0 +1,12 @@
+body {
+  background-color: white;
+  color: #222;
+  font-family: "Book Antiqua", Georgia, Palatino, Times, "Times New Roman", serif;
+  line-height: 145%;
+}
+
+pre.programlisting {
+  background-color: #FFFF99 ;
+  border: 1px solid #006600 ;
+}
+
