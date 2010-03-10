@@ -1,5 +1,7 @@
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd" [
   
+  <!ENTITY introduction SYSTEM "introduction.xml">
+
   <!ENTITY identifier-patterns SYSTEM "identifier-patterns.xml">
     <!ENTITY patterned-uris SYSTEM "patterned-uris.xml">
     <!ENTITY natural-keys SYSTEM "natural-keys.xml">
@@ -26,6 +28,8 @@
   <author><firstname>Leigh</firstname><surname>Dodds</surname></author>
   <author><firstname>Ian</firstname><surname>Davis</surname></author>
 </bookinfo>
+
+&introduction;
 
 &identifier-patterns;
 &modelling-patterns;
