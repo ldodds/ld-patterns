@@ -10,6 +10,9 @@
     <!ENTITY shared-keys SYSTEM "shared-keys.xml">
 
   <!ENTITY modelling-patterns SYSTEM "modelling-patterns.xml">
+    <!ENTITY repeated-property SYSTEM "repeated-property.xml">
+    <!ENTITY multilingual-literal SYSTEM "multilingual-literal.xml">
+    <!ENTITY typed-literal SYSTEM "typed-literal.xml">
     <!ENTITY preferred-label SYSTEM "preferred-label.xml">
     <!ENTITY index-resources SYSTEM "index-resources.xml">
 
