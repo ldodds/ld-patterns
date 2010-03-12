@@ -1,8 +1,8 @@
 STYLESHEETS_DIR = /usr/share/xml/docbook/stylesheet/docbook-xsl
 
-all: html pdf chunk epub
+all: single-file pdf pages epub
 
-chunk:
+pages:
 	xsltproc --stringparam base.dir "book/" \
 		--stringparam chunk.first.sections "1" \
 		--stringparam use.id.as.filename "1" \
@@ -10,9 +10,10 @@ chunk:
 		--stringparam html.stylesheet "../css/style.css" \
         	-o index.html $(STYLESHEETS_DIR)/xhtml/chunk.xsl src/linked-data-patterns.xml
 
-html:
+single-file:
 	xsltproc --stringparam base.dir "book/" \
 		--stringparam toc.section.depth "1" \
+		--stringparam html.stylesheet "../css/style.css" \
 		-o book/index-full.html $(STYLESHEETS_DIR)/xhtml/docbook.xsl src/linked-data-patterns.xml
 
 fo:
