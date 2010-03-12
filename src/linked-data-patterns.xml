@@ -19,6 +19,8 @@
     <!ENTITY index-resources SYSTEM "index-resources.xml">
 
   <!ENTITY publishing-patterns SYSTEM "publishing-patterns.xml">
+    <!ENTITY annotation SYSTEM "annotation.xml">
+    <!ENTITY proxy-uris SYSTEM "proxy-uris.xml">
     <!ENTITY autodiscovery SYSTEM "autodiscovery.xml">
     <!ENTITY primary-topic-autodiscovery SYSTEM "primary-topic-autodiscovery.xml">
     <!ENTITY edit-trail SYSTEM "edit-trail.xml">

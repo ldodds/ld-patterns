@@ -6,6 +6,8 @@
   </abstract>
   </chapterinfo>
 
+&annotation;
+&proxy-uris;
 &autodiscovery;
 &primary-topic-autodiscovery;
 &edit-trail;

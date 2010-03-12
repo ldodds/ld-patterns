@@ -1,7 +1,7 @@
 <sect1 id="proxy-uris">
   <title>Proxy URIs</title>
   <para> 
-   <emphasis>How do we maintain decouple creating identifiers with the processing of linking up to other datasets? How do we maintain decouple creating identifiers with the processing of linking up to other datasets?</emphasis>
+   <emphasis>How do we maintain decouple creating identifiers with the processing of linking up to other datasets?</emphasis>
   </para>
 
   <sect2><title>Context</title>
