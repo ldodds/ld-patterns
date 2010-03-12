@@ -13,12 +13,12 @@
   <para>When publishing a dataset initially focus only on identifying types of resources and assigning them unique, stable identifiers. Even if these resources already exist in another dataset. As a separate exercise generate and publish owl:sameAs links to the other dataset(s).</para>
   </sect2>
 
-  <sect2><title>Rationale</title>
-  <para>By focusing on first ensuring that a dataset is internally consistent and has identifiers for all key concepts, the data publisher can focus on the primary goal of opening up data. By decoupling the linking process, it becomes possible to explore a range of tools and techniques for linking to other datasets. Even in the case where there are obvious equivalences from the outset, it may be that overtime additonal <code>owl:sameAs</code> links need to be asserted, or that the equivalence may not longer be valid (e.g. semantic drift).</para>
-  </sect2>
-
   <sect2><title>Example(s)</title>
   <para>The BBC have created URIs for artists that are algorithmically related to the MusicBrainz URIs. By managing their own URIs they can decide when/where it is useful to link across to other sources. These equivalencies may be different to those published by MusicBrainz</para>
+  </sect2>
+
+  <sect2><title>Rationale</title>
+  <para>By focusing on first ensuring that a dataset is internally consistent and has identifiers for all key concepts, the data publisher can focus on the primary goal of opening up data. By decoupling the linking process, it becomes possible to explore a range of tools and techniques for linking to other datasets. Even in the case where there are obvious equivalences from the outset, it may be that overtime additonal <code>owl:sameAs</code> links need to be asserted, or that the equivalence may not longer be valid (e.g. semantic drift).</para>
   </sect2>
 
 </sect1>

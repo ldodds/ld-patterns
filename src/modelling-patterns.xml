@@ -9,6 +9,8 @@
 &repeated-property;
 &multilingual-literal;
 &typed-literal;
+&custom-datatype;
 &preferred-label;
+&topic-relation;
 &index-resources;
 </chapter>

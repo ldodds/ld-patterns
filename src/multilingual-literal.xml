@@ -12,10 +12,6 @@
   <para>Multi-lingual versions of a literal property can be expressed as a simple <link linkend="repeated-property">Repeated Property</link> with the addition of a language code to distinguish between the alternate versions.</para>
   </sect2>
 
-  <sect2><title>Rationale</title>
-  <para>RDF allows a literal value to be associated with a language code. This code indicates the language in which the value of the literal has been expressed. RDF uses the ISO standard language codes, including regional variants. This capability lowers the bar to internationalizing data that is published as RDF. All serializations support this functionality and the SPARQL query language provides several functions for matching and manipulating language codes.</para>
-  </sect2>
-
   <sect2><title>Example(s)</title>
   <para></para>
   <code>
@@ -23,6 +19,10 @@ _greeting a ex:LoginGreeting;
    skos:prefLabel "Hello!";
    skos:prefLabel "Hola!"@es.
   </code>
+  </sect2>
+
+  <sect2><title>Rationale</title>
+  <para>RDF allows a literal value to be associated with a language code. This code indicates the language in which the value of the literal has been expressed. RDF uses the ISO standard language codes, including regional variants. This capability lowers the bar to internationalizing data that is published as RDF. All serializations support this functionality and the SPARQL query language provides several functions for matching and manipulating language codes.</para>
   </sect2>
 
   <sect2><title>Related</title>

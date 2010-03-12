@@ -12,14 +12,14 @@
   <para>Mint URIs that are algorithmically derived from the existing non-URI identifier. This can be as simple as concatenating the existing identifier or key with a suitable base URI. The existing identifier may need to be URL encoded before creating the URI. It is common to combine this technique with Patterned URIs.</para>
   </sect2>
 
+  <sect2><title>Example(s)</title>
+  <para>The BBC programmes website uses URIs that are derived from its existing "programme id" or pid.</para>
+  </sect2>
+
   <sect2><title>Rationale</title>
   <para>Where resources are already associated with existing keys, it is likely that the creation and management of those identifiers will already be supported by a specific technology or process. There is a need to be able to create global URI based identifiers for these resources without creating unnecessary additional overheads in creating entirely new identifiers and/or mapping between URIs and existing keys.</para>
 <para>
 By deriving the URI from the natural key for the identifier we avoid the need to create a new process for assigning identifiers and largely eliminate the need to have a mapping between the two identification systems.</para>
-  </sect2>
-
-  <sect2><title>Example(s)</title>
-  <para>The BBC programmes website uses URIs that are derived from its existing "programme id" or pid.</para>
   </sect2>
 
   <sect2><title>Related</title>

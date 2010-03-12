@@ -12,6 +12,10 @@
   <para>Create data about your description pages and include foaf:topic and foaf:primaryTopic properties to link the page to the resources that it describes. When rendering these pages obtain the data describing the page then bring in descriptions of each resource referenced with <code>foaf:topic</code> and <code>foaf:primaryTopic</code> to build the base dataset for the page.</para>
   </sect2>
 
+  <sect2><title>Example(s)</title>
+  <para>The BBC programme pages include information on a primary topic supplemented with additional data about other related topics. The data included on each page may vary depending on factors other than the type of resource being described.</para>
+  </sect2>
+
   <sect2><title>Rationale</title>
   <para>Most database driven pages on the Web involve more than one type of data and augment a base dataset with related information by using multiple database queries. In many cases it is possible for the publisher to anticipate these arrangements and describe them as linked data. This can reduce multiple queries to a single query describing the resource and any related resources. The resulting dataset can be passed directly to a templating system for rendering.</para>
 <para>
@@ -23,10 +27,6 @@ Changing the level of detail for classes of page or even of specified individual
 <para>
 An additional benefit is that the page structure of the site can also be made queryable so it would be possible to discover which pages include information about a specific subject, thereby presenting the possibility of automatic cross-linking.
 </para>
-  </sect2>
-
-  <sect2><title>Example(s)</title>
-  <para>The BBC programme pages include information on a primary topic supplemented with additional data about other related topics. The data included on each page may vary depending on factors other than the type of resource being described.</para>
   </sect2>
 
 </sect1>

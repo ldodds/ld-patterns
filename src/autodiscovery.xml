@@ -20,14 +20,14 @@ href="http://example.com/data.rdf"/>
 </para>
   </sect2>
 
-  <sect2><title>Rationale</title>
-  <para>Until web browsers become fully linked data aware it may not be satisfactory to link directly to linked data pages from the body of an HTML page. HTML provides the link element to allow publishers to include links to information and resources that may be relevant in addition to the main content of the page. Web browsers may choose to display these links in their user interface. Web search engines can use these links to discover additional information that may make their search more relevent for the user.</para>
-  </sect2>
-
   <sect2><title>Example(s)</title>
   <para>The FOAF Vocabulary recommends linking a homepage to an equivalent FOAF profile using the link element.</para>
 <para>
 The Semantic Radar Firefox plugin uses the autodiscovery pattern to detect the presence of linked data related to the web page the user is viewing.</para>
+  </sect2>
+
+  <sect2><title>Rationale</title>
+  <para>Until web browsers become fully linked data aware it may not be satisfactory to link directly to linked data pages from the body of an HTML page. HTML provides the link element to allow publishers to include links to information and resources that may be relevant in addition to the main content of the page. Web browsers may choose to display these links in their user interface. Web search engines can use these links to discover additional information that may make their search more relevent for the user.</para>
   </sect2>
 
   <sect2><title>Related</title>

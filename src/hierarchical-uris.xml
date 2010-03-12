@@ -16,14 +16,14 @@
 <para>The <code>/chapters</code> URI will naturally reflect to the collection of all chapters within a specific book. The <code>/books</code> URI maps to the collection of all books within a system, etc.</para>
   </sect2>
 
-  <sect2><title>Rationale</title>
-<para>This technique is best suited to scenarios where the items in the sub-collections (chapters) are always associated with a single parent item. Other relationships might exist, e.g. the chapter may be included in another but the chapter is always associated with at least one book: they do not exist in isolation. In circumstances where this doesn't hold true, then it is best to just use simple Patterned URIs.</para>
-<para>The same applies to circumstances where the hierarchy may change over time.</para>
-  </sect2>
-
   <sect2><title>Example(s)</title>
   <para>The discogs dataset in dataincubator uses hierarchical uris of the form:</para>
 <para><code>http://discogs.dataincubator.org/release/22530/track/1-01</code></para>
+  </sect2>
+
+  <sect2><title>Rationale</title>
+<para>This technique is best suited to scenarios where the items in the sub-collections (chapters) are always associated with a single parent item. Other relationships might exist, e.g. the chapter may be included in another but the chapter is always associated with at least one book: they do not exist in isolation. In circumstances where this doesn't hold true, then it is best to just use simple Patterned URIs.</para>
+<para>The same applies to circumstances where the hierarchy may change over time.</para>
   </sect2>
 
   <sect2><title>Related</title>

@@ -1,0 +1,32 @@
+<sect1 id="topic-relation">
+  <title>Topic Relation</title>
+  <para> 
+   <emphasis>How can a web page or document be associated with a resource?</emphasis>
+  </para>
+
+  <sect2><title>Context</title>
+  <para>There is often a need to associate a resource with a page or document that provides further, human-readable content about the resource. For example a travel site may publish a travellers guide to Paris. This information may often be present in a content management system or dataset as "further reading" links. In the absence of Linked Data for the target resource, how can these extra relations be published as RDF?</para>
+  </sect2>
+
+  <sect2><title>Solution</title>
+  <para>Use the <code>foaf:topic</code> and/or <code>foaf:primaryTopic</code> relationships to associate a resource with a page(s) in which it is featured or discussed</para>
+  </sect2>
+
+
+  <sect2><title>Example(s)</title>
+  <para>In a dataset describing Paris, some additional further reading links may be available:</para>
+
+  </sect2>
+
+  <sect2><title>Rationale</title>
+  <para></para>
+
+  </sect2>
+
+  <sect2><title>Related</title>
+  <itemizedlist>
+  <listitem><link linkend="annotation">Annotation</link></listitem>
+  </itemizedlist>
+  </sect2>
+
+</sect1>

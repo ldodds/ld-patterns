@@ -12,6 +12,10 @@
   <para>Create resources for each "index" and associate the index with the items that it contains. An rdf:List or rdf:Seq is best used here as these structured include the notion of ordering that is an essential aspect of an index.</para>
   </sect2>
 
+  <sect2><title>Example(s)</title>
+  <para>The BBC /music website publishes an A-Z list of artists. But this does not use a sequence to indicate ordering.</para>
+  </sect2>
+
   <sect2><title>Rationale</title>
   <para>By creating separate resources and links between these indexes and their contents we avoid the need to publish the algorithms that are used to generate the indexes, we can instead allow machines to navigate the collection just as a human user would do. This approach is particularly useful to ensure that data can be crawled by a semantic web search engine.</para>
 <para>
@@ -19,10 +23,6 @@ If a collection may be unmanageably large, then it can be decomposed into smalle
 <para>
 By using an rdf:List or rdf:Seq to order the association between the index and its contents we retain the notion of ordering. Where the index is a permanent collection, with all contents known at the time of publishing, then an rdf:List is the best structure. Otherwise use an rdf:Seq. These RDF data structures can easily be generated and maintained using an asynchronous indexing system, avoiding the need to rebuild all the indexes whenever the underlying data changes. However for a large number of different indexes or variations the time spent building these indexes can be expensive.
 </para>
-  </sect2>
-
-  <sect2><title>Example(s)</title>
-  <para>The BBC /music website publishes an A-Z list of artists. But this does not use a sequence to indicate ordering.</para>
   </sect2>
 
   <sect2><title>Related</title>

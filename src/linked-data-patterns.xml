@@ -13,7 +13,9 @@
     <!ENTITY repeated-property SYSTEM "repeated-property.xml">
     <!ENTITY multilingual-literal SYSTEM "multilingual-literal.xml">
     <!ENTITY typed-literal SYSTEM "typed-literal.xml">
+    <!ENTITY custom-datatype SYSTEM "custom-datatype.xml">
     <!ENTITY preferred-label SYSTEM "preferred-label.xml">
+    <!ENTITY topic-relation SYSTEM "topic-relation.xml">
     <!ENTITY index-resources SYSTEM "index-resources.xml">
 
   <!ENTITY publishing-patterns SYSTEM "publishing-patterns.xml">
