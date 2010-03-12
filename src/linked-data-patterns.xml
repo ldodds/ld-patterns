@@ -17,6 +17,7 @@
     <!ENTITY preferred-label SYSTEM "preferred-label.xml">
     <!ENTITY topic-relation SYSTEM "topic-relation.xml">
     <!ENTITY index-resources SYSTEM "index-resources.xml">
+    <!ENTITY ordered-list SYSTEM "ordered-list.xml">
 
   <!ENTITY publishing-patterns SYSTEM "publishing-patterns.xml">
     <!ENTITY annotation SYSTEM "annotation.xml">
