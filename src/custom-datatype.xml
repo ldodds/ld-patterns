@@ -65,14 +65,14 @@ _:delivery1
    <listitem>Use a custom datatype to label particular types of structured value that share a common lexical form. These values may be associated with a broad range of different properties. Processing applications may want to implement a common set type conversions or display options for the values.</listitem>
    <listitem>Use a sub-property in all other cases</listitem>
   </itemizedlist>
-  <para>Note that these options aren't always mutually exclusive. It might be useful in some scenarios to have an explicit property for associating a general class of code, identifier, or other <link linkend="literal-key">Literal Key</link> with a resource, but also assign a specific datatype to the identifier as a cue for applications and reasoners</para>
+  <para>Note that these options aren't always mutually exclusive. It might be useful in some scenarios to have an explicit property for associating a general class of code, identifier, or other <link linkend="literal-keys">Literal Key</link> with a resource, but also assign a specific datatype to the identifier as a cue for applications and reasoners</para>
 
   </sect2>
 
   <sect2><title>Related</title>
   <itemizedlist>
   <listitem><link linkend="typed-literal">Typed Literal</link></listitem>
-  <listitem><link linkend="typed-literal">Literal Key</link></listitem>
+  <listitem><link linkend="literal-keys">Literal Key</link></listitem>
   </itemizedlist>
   </sect2>
 </sect1>
