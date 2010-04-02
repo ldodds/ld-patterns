@@ -1,24 +1,35 @@
-<sect1 id="proxy-uris">
-  <title>Proxy URIs</title>
+<sect1 id="equivalence-links">
+  <title>Equivalence Links</title>
   <para> 
-   <emphasis>How do we maintain decouple creating identifiers with the processing of linking up to other datasets?</emphasis>
+   <emphasis>How do we indicate that different URIs refer to the same resource or concept?</emphasis>
   </para>
 
   <sect2><title>Context</title>
-  <para>While it is a goal to reuse identifiers and to link to existing datasets wherever possible, this is often difficult to achieve in practice. In some cases there may be very little existing data to which links can be made or the may be only partial accord between datasets (e.g. in coverage or modelling). Datasets may also appear at different times with convergence on common identifiers happening at a later date. How can these linking issues be addressed?
-</para>
+  <para>Linked Data is published in a de-centralised way with multiple people and organisations collectively publishing data about the same resources. While it is a goal to reuse identifiers wherever possible this may not always be achievable. If data has been published in this way, how can links be built between datasets in order to identify that distinct URIs refer to the same resource?</para>
   </sect2>
 
   <sect2><title>Solution</title>
-  <para>When publishing a dataset initially focus only on identifying types of resources and assigning them unique, stable identifiers. Even if these resources already exist in another dataset. As a separate exercise generate and publish owl:sameAs links to the other dataset(s).</para>
+  <para>Use <code>owl:sameAs</code>, <code>skos:exactMatch</code>, or similar specialised relation, to indicate that two URIs are equivalent.</para>
   </sect2>
 
   <sect2><title>Example(s)</title>
-  <para>The BBC have created URIs for artists that are algorithmically related to the MusicBrainz URIs. By managing their own URIs they can decide when/where it is useful to link across to other sources. These equivalencies may be different to those published by MusicBrainz</para>
+<programlisting>
+<![CDATA[
+#Statement from Data Set 1
+ex:bob a foaf:Person.
+
+#Statement from Data Set 2, with equivalence
+ex:otherBob a foaf:Person.
+ex:otherBob owl:sameAs ex:bob.
+]]>
+</programlisting>
   </sect2>
 
-  <sect2><title>Rationale</title>
-  <para>By focusing on first ensuring that a dataset is internally consistent and has identifiers for all key concepts, the data publisher can focus on the primary goal of opening up data. By decoupling the linking process, it becomes possible to explore a range of tools and techniques for linking to other datasets. Even in the case where there are obvious equivalences from the outset, it may be that overtime additonal <code>owl:sameAs</code> links need to be asserted, or that the equivalence may not longer be valid (e.g. semantic drift).</para>
+  <sect2><title>Discussion</title>
+  <para>Distributed publishing is a fact of life on the web. Semantic web technologies have built-in support for handling distributed publishing of both data and schemas by standardising specific relations for bringing together disparate datasources. The most important of these facilities is the <code>owl:sameAs</code> relation, which indicates that two URIs are equivalent. According to the semantics defined in the OWL standard, the two URIs are synonyms of each other and all statements made about one of those URIs is also considered to be true of the other.</para>
+  <para>With support from a reasoner the <code>owl:sameAs</code> relation allows a semantic web application to query and interact with a single view across any number of datasets. This allows data to be integrated, without requiring any merging or re-processing of the data. It also avoids the need for up-front convergence on standard identifier schemes.</para>
+  <para>However <code>owl:sameAs</code> is only one possible equivalence relation that could be stated between resources. Other vocabularies may choose to define additional relationships that have less strong semantics associated with them. For example SKOS defines two additional properties, <code>skos:closeMatch</code> and <code>skos:exactMatch</code>, that can be used to state equivalences between concepts in a thesaurus. The relations allow for more fuzzy notions of equivalence and have weaker semantics: <code>skos:exactMatch</code> declares two concepts to be the same but doesn't imply that all statements about one concept are also true of another.</para>
+  <para>OWL also defines some additional specialised equivalence relations for relating together classes (<code>owl:equivalentClass</code>) and properties (<code>owl:equivalentProperty</code>). These should be used instead of <code>owl:sameAs</code> when relating together terms in an ontology.</para>
   </sect2>
 
 </sect1>
