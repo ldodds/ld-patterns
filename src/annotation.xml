@@ -9,7 +9,7 @@
   </sect2>
 
   <sect2><title>Solution</title>
-  <para>Just publish the statements about the external resources</para>
+  <para>Just publish RDF documents containing the statements about the external resources</para>
   </sect2>
 
   <sect2><title>Example(s)</title>
@@ -32,6 +32,7 @@
   <para>With RDF Anyone can say Anything Anywhere, there are no restrictions about who may make statements about a resource; although clearly a processing application might want to pick its sources carefully.</para>
   <para>It is entirely consistent with the Linked Data principles to make statements about third-party resources. While in some cases it is useful to use the <link linkend="proxy-uris">Proxy URIs</link> pattern, in many cases simply making statements about external resources, whether these are entities (e.g. a person) or documents (e.g. a web page) is sufficient.</para>
   </sect2>
+
 
   <sect2><title>Related</title>
   <itemizedlist>
