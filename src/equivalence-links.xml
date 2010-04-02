@@ -32,4 +32,10 @@ ex:otherBob owl:sameAs ex:bob.
   <para>OWL also defines some additional specialised equivalence relations for relating together classes (<code>owl:equivalentClass</code>) and properties (<code>owl:equivalentProperty</code>). These should be used instead of <code>owl:sameAs</code> when relating together terms in an ontology.</para>
   </sect2>
 
+  <sect2><title>Related</title>
+  <itemizedlist>
+  <listitem><link linkend="proxy-uris">Proxy URIs</link></listitem>
+  </itemizedlist>
+  </sect2>
+
 </sect1>
