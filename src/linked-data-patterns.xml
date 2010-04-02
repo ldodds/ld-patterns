@@ -32,6 +32,7 @@
     <!ENTITY autodiscovery SYSTEM "autodiscovery.xml">
     <!ENTITY primary-topic-autodiscovery SYSTEM "primary-topic-autodiscovery.xml">
     <!ENTITY edit-trail SYSTEM "edit-trail.xml">
+    <!ENTITY link-base SYSTEM "link-base.xml">
 
   <!ENTITY application-patterns SYSTEM "application-patterns.xml">
     <!ENTITY composite-descriptions SYSTEM "composite-descriptions.xml">
