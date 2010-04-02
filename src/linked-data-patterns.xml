@@ -8,6 +8,7 @@
     <!ENTITY hierarchical-uris SYSTEM "hierarchical-uris.xml">
     <!ENTITY literal-keys SYSTEM "literal-keys.xml">
     <!ENTITY shared-keys SYSTEM "shared-keys.xml">
+    <!ENTITY proxy-uris SYSTEM "proxy-uris.xml">
 
   <!ENTITY modelling-patterns SYSTEM "modelling-patterns.xml">
     <!ENTITY repeated-property SYSTEM "repeated-property.xml">
@@ -25,7 +26,8 @@
 
   <!ENTITY publishing-patterns SYSTEM "publishing-patterns.xml">
     <!ENTITY annotation SYSTEM "annotation.xml">
-    <!ENTITY proxy-uris SYSTEM "proxy-uris.xml">
+    <!ENTITY see-also SYSTEM "see-also.xml">
+    <!ENTITY equivalence-links SYSTEM "equivalence-links.xml">
     <!ENTITY named-graphs SYSTEM "named-graphs.xml">
     <!ENTITY autodiscovery SYSTEM "autodiscovery.xml">
     <!ENTITY primary-topic-autodiscovery SYSTEM "primary-topic-autodiscovery.xml">
