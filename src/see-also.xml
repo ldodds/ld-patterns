@@ -16,7 +16,7 @@
   <para>The Linked Data published by the BBC Wildlife Finder application includes data about ecozones. The data about an individual ecozone, e.g. the <ulink linkend="http://www.bbc.co.uk/nature/ecozones/Nearctic_ecozone.rdf">Nearctic Ecozone</ulink> refers to the habitats it contains and the species that live in that ecozone. A semantic web agent can therefore begin traversing the graph to find more related data. The RDF document returned from that URI also includes a seeAlso relationship to another document that lists all ecozones.</para>
   </sect2>
 
-  <sect2><title>Rationale</title>
+  <sect2><title>Discussion</title>
   <para>The <code>rdfs:seeAlso</code> relationship is intended to support some hypertext links between RDF documents on the web. There are no explicit semantics for the property other than that a user agent might expect to find additional, relevant RDF data about a resource at the indicated location. Using this relationship allows documents to be linked together without requiring semantic relations to be specified between resources where none exists.</para>
   <para>By ensuring that data from a Linked Data site is robustly linked together, it helps semantic web crawlers and user agents to traverse the site to find all relevant material. The <code>rdfs:seeAlso</code> relation is therefore well-suited for publishing simple directories of links for a crawler to follow.</para>
   <para>The relation can also be used to refer to other documents on the web, e.g. published by third-parties, that may contain additional useful <link linkend="annotation">Annotation</link> data.</para>

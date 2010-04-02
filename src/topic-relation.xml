@@ -31,7 +31,7 @@
 
   </sect2>
 
-  <sect2><title>Rationale</title>
+  <sect2><title>Discussion</title>
   <para>There will always be a mix of unstructured documents and structured data on the Semantic Web. There are many kinds of relations that could be expressed between a document and a resource, but a very common relation is one of categorisation, e.g. identifying when a document or page has a specific focus or theme. The FOAF topic terms, <code>foaf:topic</code> and <code>foaf:primaryTopic</code> provide a means to link a document directly with a resource which features as a topic in that document.
   </para>
   <para>Other vocabularies provide similar related properties that may be more useful in some scenarios. For example Dublin Core defines the <code>dc:subject</code> property, but this is best used to relate a document to an entry in a controlled vocabulary, e.g. a subject heading, rather than a "real world" resource.</para>

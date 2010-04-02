@@ -24,7 +24,7 @@ _:doc
 </programlisting>
   </sect2>
 
-  <sect2><title>Rationale</title>
+  <sect2><title>Discussion</title>
   <para>Repeating properties is the simplest approach to handling multi-valued relations. The alternatives all have their downsides. One alternative would be to use a structured value for the literal, e.g:</para>
 
 <programlisting>

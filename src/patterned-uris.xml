@@ -25,7 +25,7 @@
   <para>The BBC website uses /programmes to group together URIs that relate to series, brands and episodes, all of which are subclasses of the rdf:type po:Programme</para>
   </sect2>
 
-  <sect2><title>Rationale</title>
+  <sect2><title>Discussion</title>
   <para>There are clear benefits from having human-readable, hackable URIs. This solution achieves that by ensuring the same naming scheme that applies to the underlying data also applies to the URIs. This provides a clear relation between the URI and the type of thing that it describes.
 </para>
   </sect2>

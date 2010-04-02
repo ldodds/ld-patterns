@@ -30,7 +30,7 @@ _:event1 a ex:Conference;
 </programlisting>
   </sect2>
 
-  <sect2><title>Rationale</title>
+  <sect2><title>Discussion</title>
   <para>The N-ary Relation pattern is similar to the <link linkend="qualified-relation">Qualified Relation</link> pattern as both involve the same basic solution: modelling a relationship as a resource rather than a property. They differ in their context. In the Qualified Relation pattern the desire is to annotate a relationship between two resources, whereas in the N-ary Relation pattern the goal is to represent a complex relation between several resources.</para>
   </sect2>
 

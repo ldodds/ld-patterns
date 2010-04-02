@@ -16,7 +16,7 @@
   <para>A library system publishes Linked Data about authors. The preferred mechanism for specifying author names is using a normalized form, e.g Surname, First Name. This preferred label can be specified using <code>skos:prefLabel</code>, but the authors full name, and part names can be published using properties from FOAF. A simple Linked Data browser may use the preferred label, whereas an Address Book application browsing the same data may choose to assemble display labels according to user defined preferences, e.g. First Name, Surname.</para>
   </sect2>
 
-  <sect2><title>Rationale</title>
+  <sect2><title>Discussion</title>
   <para>The <code>skos:prefLabel</code> property, whilst defined in the SKOS ontology, is a general purpose property that identifies the preferred label for a resource. By standardising on this property for labelling data providers and consumers can converge on a common mechanism for expressing labels of resources.</para>
 <para>
 Having a single preferred property for display labels encourages convergence but doesn't preclude the use of more specific properties for other purposes. For example the literal value of the <code>skos:prefLabel</code> property can be formatted for display, leaving other properties, e.g. <code>rdfs:label</code>, <code>foaf:name</code>, etc to express alternatives or variations in labels or naming. A client that is aware of the meaning of specific predicates may choose to build labels using alternate logic, but having a label unambiguously specified simplifies application development.</para>

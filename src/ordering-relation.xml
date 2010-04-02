@@ -35,7 +35,7 @@ ex:stop3 a ex:BusStop;
 </programlisting>
   </sect2>
 
-  <sect2><title>Rationale</title>
+  <sect2><title>Discussion</title>
   <para>RDF provides several ways to implicitly and explicitly defining ordering in a dataset. Resources often have literal properties that implicitly define an ordering relationship between resources. E.g. time stamps on events, publication dates, or in the above example the numbers of each of the bus stops. Application code can use a query to extract this implicit ordering from the date. However its otherwise not defined in the model.</para>
   <para>Another, more explicit way to define order is by using an RDF collection to create an <link linkend="ordered-list">Ordered List</link>. Using an Ordered List, the above example could have been expressed as:</para>
 

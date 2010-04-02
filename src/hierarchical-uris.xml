@@ -21,7 +21,7 @@
 <para><code>http://discogs.dataincubator.org/release/22530/track/1-01</code></para>
   </sect2>
 
-  <sect2><title>Rationale</title>
+  <sect2><title>Discussion</title>
 <para>This technique is best suited to scenarios where the items in the sub-collections (chapters) are always associated with a single parent item. Other relationships might exist, e.g. the chapter may be included in another but the chapter is always associated with at least one book: they do not exist in isolation. In circumstances where this doesn't hold true, then it is best to just use simple Patterned URIs.</para>
 <para>The same applies to circumstances where the hierarchy may change over time.</para>
   </sect2>

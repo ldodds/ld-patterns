@@ -25,7 +25,7 @@ http://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711
 
   </sect2>
 
-  <sect2><title>Rationale</title>
+  <sect2><title>Discussion</title>
   <para>Predictable URIs structures make it easy for application developers and toolkits to build URIs from simple templates. By using URIs that are constructed from public identifiers, that already have scope outside of the immediate application, it increases the ease with which inter-linking can take place. For example, the pattern may avoid the need to look-up URIs in a SPARQL endpoint, allowing a developer to simplify use a URI template.</para>
 <para>
 The Shared Keys pattern is best suited to situations where the shared identifiers are stable and rarely change.

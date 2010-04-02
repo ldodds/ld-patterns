@@ -25,7 +25,7 @@
   </programlisting>
   </sect2>
 
-  <sect2><title>Rationale</title>
+  <sect2><title>Discussion</title>
   <para>Reification is a much maligned technique but has its role to play in RDF modelling. Understanding its limitations allows it to be used where appropriate and avoided when other techniques like <link linkend="named-graphs">Named Graphs</link> are a better fit.</para>
   <para>RDF triples cannot be directly annotated. Reification is a modelling approach to dealing with this that involves changing the structure of the model. Each triple that needs to be annotated is instead modelled as a resource in its own right; an instance of the rdf:Statement class. The statement resource then has subject, predicate, and object properties that describe the original triple; additional properties can then be added to annotate the statement.</para>
   <para>The obvious limitation of this approach is that the data model no longer contains a simple set of triples, instead it contains <emphasis>descriptions of triples</emphasis>. The triples themselves have not been explicitly asserted. This makes a reified model harder to query, more difficult to manipulate, and at least three or four times larger in terms of number of triples.</para>

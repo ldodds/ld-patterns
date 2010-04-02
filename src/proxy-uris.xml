@@ -22,7 +22,7 @@ ex:anImage a foaf:Image;
   </programlisting>
   </sect2>
 
-  <sect2><title>Rationale</title>
+  <sect2><title>Discussion</title>
   <para>A publisher should focus on their immediate goal of opening up their data, ensuring that the published data is internally consistent and has identifiers for all key concepts. If existing identifiers exist then these should be reused. Where they don't then new locally minted URIs should be created from <link linkend="shared-keys">Shared Keys</link>.</para>
   <para>Once the data has been published, some alignment can take place within a community to achieve agreement on standard URIs for shared identifiers. One approach for achieving this alignment is to publish <link linkend="equivalence-links">Equivalence Links</link>.</para>
   </sect2>
