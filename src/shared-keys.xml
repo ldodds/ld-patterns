@@ -11,19 +11,24 @@ It is also common that within a specific domain there will be a set of non-web i
 </para>
   </sect2>
 
-  <sect2><title>Example(s)</title>
-  <para>The BBC have created URIs for artists that are algorithmically related to the MusicBrainz URIs, as they use a simple Shared Key: the MusicBrainz ID. Any application that already uses a MusicBrainz ID can therefore easily inter-link with either source.
-</para>
-  </sect2>
-
   <sect2><title>Solution</title>
   <para>Create <link linkend="patterned-uris">Patterned URIs</link> by applying the <link linkend="natural-keys">Natural Keys</link> pattern, but prefer public, standard identifiers rather than internal system specific codes.</para>
+  </sect2>
+
+  <sect2><title>Example(s)</title>
+  <para>The BBC have created URIs for artists that are algorithmically related to the MusicBrainz URIs using a common Shared Key. MusicBrainz URIs are <link linkend="patterned-uris">Patterned URIs</link> built from a "MusicBrainz ID", e.g. <code>a74b1b7f-71a5-4011-9441-d0b5e4122711</code>. The MusicBrainz and BBC URIs are shown below:</para>
+
+<programlisting>
+http://www.bbc.co.uk/music/artists/a74b1b7f-71a5-4011-9441-d0b5e4122711
+http://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711
+</programlisting>
+
   </sect2>
 
   <sect2><title>Rationale</title>
   <para>Predictable URIs structures make it easy for application developers and toolkits to build URIs from simple templates. By using URIs that are constructed from public identifiers, that already have scope outside of the immediate application, it increases the ease with which inter-linking can take place. For example, the pattern may avoid the need to look-up URIs in a SPARQL endpoint, allowing a developer to simplify use a URI template.</para>
 <para>
-The Shared Keys pattern is best suited to situations where the shared identifiers is stable and rarely changes.
+The Shared Keys pattern is best suited to situations where the shared identifiers are stable and rarely change.
 </para>
   </sect2>
 
