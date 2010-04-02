@@ -1,0 +1,30 @@
+<sect1 id="named-graphs">
+  <title>Named Graphs</title>
+  <para> 
+   <emphasis>How do we organize and annotate a set of RDF statements?</emphasis>
+  </para>
+
+  <sect2><title>Context</title>
+  <para>The RDF model treats triples as a single collection of statements. For many scenarios it is useful to have some additional structure or grouping to the data. E.g. to identify all triples from a particular source, or created on a specific date. It is useful to be able to describe and annotate these collections just like any other resource.</para>
+  </sect2>
+
+  <sect2><title>Solution</title>
+  <para>Use URIs to identify collections of statements. Where necessary associate a triple with this URI to create a <emphasis>quad</emphasis></para>
+  </sect2>
+
+  <sect2><title>Example(s)</title>
+  <para>TODO. TriG?</para>
+  </sect2>
+
+  <sect2><title>Rationale</title>
+  <para>RDF triple stores have for some time allowed sets of statements to be grouped into identifiable sets. Using a URI for this identifier means that such named graphs can themselves be described using RDF. E.g. to say when they were created, how they were authored, etc. SPARQL 1.0 has, to some extent, standardised this capability, allowing queries to be made across all or selected named graphs. Syntaxes for serialising named graphs also exist, allowing quads to be exchanged between systems. These syntaxes include NQuads, Trix, and TriG.</para>
+  <para>By essentially extending the core RDF model from a triple to a quad, Named Graphs provide an extra degree of freedom in managing RDF datasets. This means that they are an increasingly important part of the RDF toolset, supporting a number of different application scenarios as well as a more manageable alternative to <link linkend="reified-statement">reification</link> for handling versioning and provenance in datasets.</para>
+  <para>However there is no agreed meaning for this extra data element. In one application the graph identifier could be a simple label used to identify a set of triples, whereas in another it may identify the source URI from which some data was retrieved.</para>
+  </sect2>
+
+  <sect2><title>Related</title>
+  <itemizedlist>
+  <listitem><link linkend="reified-statement">Reified Statement</link></listitem>
+  </itemizedlist>
+  </sect2>
+</sect1>

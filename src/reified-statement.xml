@@ -1,0 +1,41 @@
+<sect1 id="reified-statement">
+  <title>Reified Statement</title>
+  <para> 
+   <emphasis>How can we make statements about statements?</emphasis>
+  </para>
+
+  <sect2><title>Context</title>
+  <para>The foundation of the RDF model is the triple. This simple structure can be combined to create complex descriptions that can support any kind of data model. But in some circumstances there may be a need to annotate an individual triple, e.g. to indicate when the statement was made, or who by. How can this be achieved?</para>
+  </sect2>
+
+  <sect2><title>Solution</title>
+  <para>Use a technique known as reification and model the triple as a resource, with properties referring to its subject, predicate and object.</para>
+  </sect2>
+
+  <sect2><title>Example(s)</title>
+  <para></para>
+  <programlisting>
+<![CDATA[
+ _:ex rdf:type rdf:Statement;
+   rdf:subject <http://www.example.com/book/1>;
+   rdf:predicate <http://xmlns.com/foaf/0/1/maker>;
+   rdf:object <http://www.example.com/author/joe>;
+   dc:created "2010-02-13".
+]]>
+  </programlisting>
+  </sect2>
+
+  <sect2><title>Rationale</title>
+  <para>Reification is a much maligned technique but has its role to play in RDF modelling. Understanding its limitations allows it to be used where appropriate and avoided when other techniques like <link linkend="named-graphs">Named Graphs</link> are a better fit.</para>
+  <para>RDF triples cannot be directly annotated. Reification is a modelling approach to dealing with this that involves changing the structure of the model. Each triple that needs to be annotated is instead modelled as a resource in its own right; an instance of the rdf:Statement class. The statement resource then has subject, predicate, and object properties that describe the original triple; additional properties can then be added to annotate the statement.</para>
+  <para>The obvious limitation of this approach is that the data model no longer contains a simple set of triples, instead it contains <emphasis>descriptions of triples</emphasis>. The triples themselves have not been explicitly asserted. This makes a reified model harder to query, more difficult to manipulate, and at least three or four times larger in terms of number of triples.</para>
+  <para>In contrast to reification the <link linkend="named-graphs">Named Graph</link> pattern offers a data management approach to annotating triples or sets of triples, by associating them with a URI which can itself be the subject of additional assertions.</para>
+  <para>So where is reification best used? Current practice seems to suggest that reified statements are best used as a technique for describing changes to the structure of a graph, e.g. statements that have been added or removed, along with additional properties to indicate the time of the change, etc. In other circumstances it is best used with a reasoner or rule engine that can support surfacing the original triples, thereby simplifying querying. But this still comes with a cost of increased storage as well as potentially performance issues.</para>
+  </sect2>
+
+  <sect2><title>Related</title>
+  <itemizedlist>
+  <listitem><link linkend="named-graphs">Named Graphs</link></listitem>
+  </itemizedlist>
+  </sect2>
+</sect1>
