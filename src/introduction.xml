@@ -31,9 +31,12 @@
 	<para>This is something that we wrestled with for a long time. Our goal is that this book should ultimately reflective the collective experience of the Linked Data community and we want to encourage participation and feedback. You can use the <ulink link="http://dataincubator.org">dataincubator.org</ulink> mailing list to discuss the book and debates its contents. We're also hoping to include your submissions, corrections and edits in the future. </para>
 	<para>But while we want this book to grow as a participatory activity we (particularly Leigh) felt that an editorial layer would be a useful addition to this process. Helping firm up the naming, communication and organisation of the pattern catalogue as it develops.</para>
 	<para>We also encourage the community, if they find a design pattern approach to be useful, to publish and share their own patterns using whatever mechanism feels right for them. A thousand flowers, etc.</para>
-
 	</sect2>
 
+	<sect2><title>What's Not Covered?</title>
+        <para>This book isn't a primer on RDF or OWL. There are already plenty of good sources of introductory material on the technologies discussed here. The book makes the assumptions that you have some basic understanding of RDF, RDF Schema and possibly OWL. The examples are given in Turtle syntax, so you should be familiar with that syntax too.</para>
+	<para>If you're looking for a deeper introduction to modelling with RDF Schema and OWL then you should read <ulink linkend="http://workingontologist.org/">Semantic Web for the Working Ontologist</ulink>. It's a great book that will give you a thorough understanding of how to apply the technologies. We're hoping that this work is in some sense a companion piece.</para>
+        </sect2>
 	<sect2>
 		<title>How the Catalogue Is Organized</title>
 
@@ -52,12 +55,13 @@
 
 	<para>The pattern catalogue includes a number of examples. Snippets of code, data, or queries that help to illustrate a specific pattern. Code examples are shown in this font.</para>
 
-	<para>Where we should examples of RDF data, we have used the <ulink link="">Turtle</ulink> syntax for RDF because its more concise and readable than RDF/XML. We have preferred to use prefixed names for standard RDF properties and classes, but do not include the declarations of these prefixes in the examples.</para>
+	<para>Where we should examples of RDF data, we have used the <ulink link="http://www.w3.org/TeamSubmission/turtle/">Turtle</ulink> syntax for RDF because its more concise and readable than RDF/XML. We have preferred to use prefixed names for standard RDF properties and classes, but do not include the declarations of these prefixes in the examples.</para>
 
 	<para>Unless otherwise stated, assume that when you're looking at some Turtle we've declared the following prefixes:</para>
 
 <programlisting>
 <![CDATA[
+        @prefix ex: <http://www.example.org/>
 	@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 	@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 	@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
