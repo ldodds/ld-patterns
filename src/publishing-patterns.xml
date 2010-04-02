@@ -7,8 +7,10 @@
   </chapterinfo>
 
 &annotation;
-&proxy-uris;
 &autodiscovery;
-&primary-topic-autodiscovery;
 &edit-trail;
+&named-graphs;
+&primary-topic-autodiscovery;
+&proxy-uris;
+
 </chapter>

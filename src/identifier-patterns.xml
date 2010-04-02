@@ -6,9 +6,9 @@
   </abstract>
   </chapterinfo>
 
-&patterned-uris;
-&natural-keys;
 &hierarchical-uris;
 &literal-keys;
+&natural-keys;
+&patterned-uris;
 &shared-keys;
 </chapter>

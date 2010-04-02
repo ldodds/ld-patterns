@@ -18,10 +18,15 @@
     <!ENTITY topic-relation SYSTEM "topic-relation.xml">
     <!ENTITY index-resources SYSTEM "index-resources.xml">
     <!ENTITY ordered-list SYSTEM "ordered-list.xml">
+    <!ENTITY reified-statement SYSTEM "reified-statement.xml">
+    <!ENTITY nary-relation SYSTEM "nary-relation.xml">
+    <!ENTITY qualified-relation SYSTEM "qualified-relation.xml">
+    <!ENTITY ordering-relation SYSTEM "ordering-relation.xml">
 
   <!ENTITY publishing-patterns SYSTEM "publishing-patterns.xml">
     <!ENTITY annotation SYSTEM "annotation.xml">
     <!ENTITY proxy-uris SYSTEM "proxy-uris.xml">
+    <!ENTITY named-graphs SYSTEM "named-graphs.xml">
     <!ENTITY autodiscovery SYSTEM "autodiscovery.xml">
     <!ENTITY primary-topic-autodiscovery SYSTEM "primary-topic-autodiscovery.xml">
     <!ENTITY edit-trail SYSTEM "edit-trail.xml">
@@ -32,7 +37,7 @@
 <book>
 <bookinfo>
   <title>Linked Data Patterns</title>
-  <subtitle>A pattern catalogue for publishing, consuming and processing Linked Data</subtitle>
+  <subtitle>A pattern catalogue for modelling, publishing, and consuming Linked Data</subtitle>
   <author><firstname>Leigh</firstname><surname>Dodds</surname></author>
   <author><firstname>Ian</firstname><surname>Davis</surname></author>
   <abstract>

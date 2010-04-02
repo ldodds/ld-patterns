@@ -6,12 +6,17 @@
   </abstract>
   </chapterinfo>
 
-&repeated-property;
-&multilingual-literal;
-&typed-literal;
 &custom-datatype;
-&preferred-label;
-&topic-relation;
 &index-resources;
+&multilingual-literal;
+&nary-relation;
 &ordered-list;
+&ordering-relation;
+&preferred-label;
+&qualified-relation;
+&reified-statement;
+&repeated-property;
+&topic-relation;
+&typed-literal;
+
 </chapter>
