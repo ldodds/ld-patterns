@@ -1,24 +1,36 @@
 <sect1 id="proxy-uris">
   <title>Proxy URIs</title>
   <para> 
-   <emphasis>How do we maintain decouple creating identifiers with the processing of linking up to other datasets?</emphasis>
+   <emphasis>How do we deal with lack of standard identifiers for third-party resources?</emphasis>
   </para>
 
   <sect2><title>Context</title>
-  <para>While it is a goal to reuse identifiers and to link to existing datasets wherever possible, this is often difficult to achieve in practice. In some cases there may be very little existing data to which links can be made or the may be only partial accord between datasets (e.g. in coverage or modelling). Datasets may also appear at different times with convergence on common identifiers happening at a later date. How can these linking issues be addressed?
-</para>
+  <para>While it is a goal to reuse identifiers across datasets wherever possible, this is often difficult to achieve in practice. An authority for some specific data, e.g. ISO, may not have assigned unique URIs to resources in their dataset. Datasets also appear online at different times, making reuse difficult until more authoritative data appears and convergence happens on common identifiers. In these circumstances, how should identifiers be created for these third-party resources.</para>
   </sect2>
 
   <sect2><title>Solution</title>
-  <para>When publishing a dataset initially focus only on identifying types of resources and assigning them unique, stable identifiers. Even if these resources already exist in another dataset. As a separate exercise generate and publish owl:sameAs links to the other dataset(s).</para>
+  <para>Treat third-party resources identically to those in your own data and assign them URIs within your domain.</para>
   </sect2>
 
   <sect2><title>Example(s)</title>
-  <para>The BBC have created URIs for artists that are algorithmically related to the MusicBrainz URIs. By managing their own URIs they can decide when/where it is useful to link across to other sources. These equivalencies may be different to those published by MusicBrainz</para>
+  <para>There is still no agreed standard way of generating URIs for Internet Media Types. IANA have adopted RDF for publishing descriptions of registered media types. A data set containing descriptions of images may therefore use locally minted URIs for those media types:</para>
+  <programlisting>
+<![CDATA[
+ex:anImage a foaf:Image;
+  dc:format <http://www.example.org/media-types/image/jpeg>
+]]>
+  </programlisting>
   </sect2>
 
   <sect2><title>Rationale</title>
-  <para>By focusing on first ensuring that a dataset is internally consistent and has identifiers for all key concepts, the data publisher can focus on the primary goal of opening up data. By decoupling the linking process, it becomes possible to explore a range of tools and techniques for linking to other datasets. Even in the case where there are obvious equivalences from the outset, it may be that overtime additonal <code>owl:sameAs</code> links need to be asserted, or that the equivalence may not longer be valid (e.g. semantic drift).</para>
+  <para>A publisher should focus on their immediate goal of opening up their data, ensuring that the published data is internally consistent and has identifiers for all key concepts. If existing identifiers exist then these should be reused. Where they don't then new locally minted URIs should be created from <link linkend="shared-keys">Shared Keys</link>.</para>
+  <para>Once the data has been published, some alignment can take place within a community to achieve agreement on standard URIs for shared identifiers. One approach for achieving this alignment is to publish <link linkend="equivalence-links">Equivalence Links</link>.</para>
   </sect2>
 
+  <sect2><title>Related</title>
+  <itemizedlist>
+  <listitem><link linkend="shared-keys">Shared Keys</link></listitem>
+  <listitem><link linkend="equivalence-links">Equivalence Links</link></listitem>
+  </itemizedlist>
+  </sect2>
 </sect1>
