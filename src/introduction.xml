@@ -48,6 +48,8 @@
 		<listitem><xref linkend="publishing-patterns"/></listitem>
 		<listitem><xref linkend="application-patterns"/></listitem>
 		</itemizedlist>
+
+		<para>The catalogue also includes a few patterns that arguably aren't patterns at all, they're similar features of the RDF model; <link linkend="typed-literal">Typed Literal</link> for example. We decided to include these for the sake of helping to document best practices. There are plenty of examples and material on some of these basic features but they're often overlooked by both experienced and new practitioners. So we've opted to document these as patterns to help draw attention to them.</para>
 	</sect2>
 
     <sect2>
