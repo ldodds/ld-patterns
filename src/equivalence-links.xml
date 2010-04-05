@@ -35,6 +35,7 @@ ex:otherBob owl:sameAs ex:bob.
   <sect2><title>Related</title>
   <itemizedlist>
   <listitem><link linkend="proxy-uris">Proxy URIs</link></listitem>
+  <listitem><link linkend="link-base">Link Base</link></listitem>
   </itemizedlist>
   </sect2>
 
