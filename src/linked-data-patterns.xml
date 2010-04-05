@@ -33,9 +33,12 @@
     <!ENTITY primary-topic-autodiscovery SYSTEM "primary-topic-autodiscovery.xml">
     <!ENTITY edit-trail SYSTEM "edit-trail.xml">
     <!ENTITY link-base SYSTEM "link-base.xml">
+    <!ENTITY progressive-enrichment SYSTEM "progressive-enrichment.xml">
 
   <!ENTITY application-patterns SYSTEM "application-patterns.xml">
+    <!ENTITY bounded-description SYSTEM "bounded-description.xml">
     <!ENTITY composite-descriptions SYSTEM "composite-descriptions.xml">
+    <!ENTITY blackboard SYSTEM "blackboard.xml">
 ]>
 <book>
 <bookinfo>

@@ -1,0 +1,37 @@
+<sect1 id="bounded-description">
+  <title>Bounded Description</title>
+  <para> 
+   <emphasis>How can we generate a useful default description of a resource without having to enumerate all the properties or relations that are of interest?</emphasis>
+  </para>
+
+  <sect2><title>Context</title>
+  <para>Application using semi-structured data sources should be tolerant of discovering unexpected data or missing properties of resources. For applications to be able to achieve this, there needs to be an approach to generating useful default descriptions of resources that don't require enumerating every property of interest. This behaviour is particularly useful for Linked Data browsers or similar applications that can have little or no expectation as to with which datasets they may be interacting.</para>
+  </sect2>
+
+  <sect2><title>Solution</title>
+  <para>Extract a sub-graph, or "bounded description", from a dataset that contains all of relevant properties and relationships associated with a resource.</para>
+  </sect2>
+
+  <sect2><title>Discussion</title>
+  <para>Bounded Descriptions take advantage of the graph structure of RDF in order to define simple graph operations that can be applied to any node in the graph. The operations yield a useful sub-set of the properties associated with the resource based on how they relate to the resource, rather than the specific RDF predicates that have been used.</para>
+  <para>There are a number of different types of bounded description that are in common use:
+  <itemizedlist>
+  <listitem><emphasis>Datatype Property Description</emphasis> -- retrieve all properties of a resource whose values are literals</listitem>
+  <listitem><emphasis>Object Property Description </emphasis> -- retrieve all properties of a resource whose values are resources, typically eliminating blank nodes</listitem>
+  <listitem><emphasis>Concise Bounded Description </emphasis> -- effectively the above two descriptions, but recursively include all properties of any blank nodes present in object properties</listitem>
+  <listitem><emphasis>Symmetric Concise Bounded Description </emphasis> -- as above but include statements where the resource being described is the object, rather than the subject</listitem>
+  </itemizedlist>
+  </para>
+  <para>Many different variations of these basic descriptions are possible, especially when additional filtering is done to include, for example, properties that are useful for labelling (in a user interface).</para>
+  <para>In practice many common web application use cases can easily be fulfilled with one or more bounded description queries. The ability to use general purpose queries to build a user interface or otherwise drive application behaviour increases cacheability of the results: an application may end up using a small number of relatively general purpose queries that apply to a number of use cases.</para>
+  <para>Bounded descriptions can be implemented using SPARQL <code>CONSTRUCT</code> queries. SPARQL <code>DESCRIBE</code> queries are implemented using a Bounded Description that is built-in to the specific SPARQL processor being used. The most common approach is to use a Concise Bounded Description.</para>
+  </sect2>
+
+  <sect2><title>Further Reading</title>
+  <itemizedlist>
+  <listitem><ulink linkend="http://n2.talis.com/wiki/Bounded_Descriptions_in_RDF">Bounded Descriptions in RDF</ulink></listitem>
+  <listitem><ulink linkend="http://www.w3.org/Submission/CBD/">Concise Bounded Description</ulink></listitem>
+  </itemizedlist>
+  </sect2>
+
+</sect1>
