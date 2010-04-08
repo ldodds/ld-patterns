@@ -1,12 +1,102 @@
-body {
   background-color: white;
   color: #222;
-  font-family: "Book Antiqua", Georgia, Palatino, Times, "Times New Roman", serif;
+  font-family: "Book Antiqua", Palatino, "Palatino Linotype", Georgia, Times, "Times New Roman", serif;
   line-height: 145%;
+  margin: 0;
+  padding: 0;
 }
 
 pre.programlisting {
-  background-color: #FFFF99 ;
-  border: 1px solid #006600 ;
+  background-color: #fbf8a8 ;
+  border: 1px solid #888 ;
+  padding: 10px;
 }
 
+h1.title {
+  font-size: 120px;
+  width: 4em;
+  line-height: 0.75em;
+  letter-spacing: -0.07em;
+  padding-top: 0.167em;
+  padding-bottom: 0.167em;
+  text-align: left;
+  border-bottom: 5px solid black;
+  display: block;
+}
+
+h2.subtitle {
+  margin-top: -10em;
+  width: 10.5em;
+  font-size: 40px;
+  line-height: 1.375em;
+  letter-spacing: 0.02em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: left;
+  position: relative;
+  margin-left: 13.5em;
+  color: #c33131;
+  min-height: 275px;
+}
+
+h3.author {
+  margin: 0;
+  font-weight: normal;
+  text-align: left;
+  float: left;
+  font-size: 40px;
+  margin-right: 0.5em;
+  position: relative;
+}
+
+div.book div.titlepage div.abstract {
+  clear: right;
+  position: relative;
+  margin-top: 300px;
+  text-align: left;
+}
+
+div.abstract {
+  text-align: left;
+}
+
+div.toc {
+  margin-top: 40px;
+}
+
+div.toc p b {
+  font-weight: normal;
+  font-size: 20px;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+}
+
+div.toc dl dt span.chapter {
+  margin-top: 20px;
+  display: block;
+}
+
+hr {
+  border: 0;
+  color: #888;
+  background-color: #888;
+  height: 1px;
+}
+
+div.navheader th {
+  font-variant: small-caps;
+  letter-spacing: 0.2em;
+  font-weight: normal;
+}
+
+div.book, div.chapter, div.sect1 {
+  margin: 20px;
+}
+
+div.titlepage {
+  text-align: center;
+}
+
+a {
+  color: #315ac3;
+}
