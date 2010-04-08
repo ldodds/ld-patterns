@@ -22,7 +22,7 @@ eg:mary a foaf:Person.
 _:bobMaryMarriage a ex:Marriage;
     ex:partner eg:bob;
     ex:partner eg:mary;
-    ex:date "2009-04-01".
+    ex:date "2009-04-01"^^xsd:date.
 ]]>
   </programlisting>
   <para>A diagnosis can be viewed as a relationship between a person and a disease. A diagnosis needs to be qualified with a probability. By creating a class to model the diagnosis explicitly, as well as additional properties for relating the diagnosis to a patient and a disease, it becomes possible to annotate the relationship with qualifying properties:</para>
@@ -51,8 +51,8 @@ eg:bob a foaf:Person.
 eg:mary a foaf:Person.
 
 eg:bob ex:partner eg:mary.
-eg:bob ex:weddingDay "2009-04-01".
-eg:mary ex:weddingDay "2009-04-01".
+eg:bob ex:weddingDay "2009-04-01"^^xsd:date.
+eg:mary ex:weddingDay "2009-04-01"^^xsd:date.
 ]]>
   </programlisting>
   <para>In the above alternative the marriage relationship between two people is expressed using the <code>ex:partner</code> relation and the date of the wedding with the separate <code>ex:weddingDay</code> property. On the surface this seems simpler but loses flexibility and clarity. Firstly there could be a large number of additional properties associated with the marriage relation, all of these would need to be added to the model, and applications would need to know that this collection of properties were all related in some way (i.e. were about a marriage). It also fails to model divorces and re-marriages. Adding a relation resource deals with this better as we have greater clarity in the model about the relationship and its specific properties.</para>
