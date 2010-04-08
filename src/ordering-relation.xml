@@ -55,4 +55,11 @@ ex:bus10 a ex:Bus;
   <listitem><link linkend="ordered-list">Ordered List</link></listitem>
   </itemizedlist>
   </sect2>
+
+  <sect2><title>Further Reading</title>
+  <itemizedlist>
+  <listitem><ulink url="http://www.w3.org/TR/swbp-n-aryRelations/#pattern2">Defining N-ary Relations on the Semantic Web</ulink></listitem>
+  </itemizedlist>
+  </sect2>
+
 </sect1>

@@ -29,8 +29,8 @@
 
   <sect2><title>Further Reading</title>
   <itemizedlist>
-  <listitem><ulink linkend="http://n2.talis.com/wiki/Bounded_Descriptions_in_RDF">Bounded Descriptions in RDF</ulink></listitem>
-  <listitem><ulink linkend="http://www.w3.org/Submission/CBD/">Concise Bounded Description</ulink></listitem>
+  <listitem><ulink url="http://n2.talis.com/wiki/Bounded_Descriptions_in_RDF">Bounded Descriptions in RDF</ulink></listitem>
+  <listitem><ulink url="http://www.w3.org/Submission/CBD/">Concise Bounded Description</ulink></listitem>
   </itemizedlist>
   </sect2>
 

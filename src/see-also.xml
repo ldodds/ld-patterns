@@ -13,7 +13,7 @@
   </sect2>
 
   <sect2><title>Example(s)</title>
-  <para>The Linked Data published by the BBC Wildlife Finder application includes data about ecozones. The data about an individual ecozone, e.g. the <ulink linkend="http://www.bbc.co.uk/nature/ecozones/Nearctic_ecozone.rdf">Nearctic Ecozone</ulink> refers to the habitats it contains and the species that live in that ecozone. A semantic web agent can therefore begin traversing the graph to find more related data. The RDF document returned from that URI also includes a seeAlso relationship to another document that lists all ecozones.</para>
+  <para>The Linked Data published by the BBC Wildlife Finder application includes data about ecozones. The data about an individual ecozone, e.g. the <ulink url="http://www.bbc.co.uk/nature/ecozones/Nearctic_ecozone.rdf">Nearctic Ecozone</ulink> refers to the habitats it contains and the species that live in that ecozone. A semantic web agent can therefore begin traversing the graph to find more related data. The RDF document returned from that URI also includes a seeAlso relationship to another document that lists all ecozones.</para>
   </sect2>
 
   <sect2><title>Discussion</title>
