@@ -1,9 +1,0 @@
-= Linked Data Patterns
-
-This is project contains the source text for the Linked Data Patterns book available from:
-
-http://patterns.dataincubator.org
-
-The book is marked up using DocBook XML. The DocBook XSL stylesheets are used to generate the online text as well as the PDF and EPUB versions.
-
-A Makefile is supplied to generate the text locally.
