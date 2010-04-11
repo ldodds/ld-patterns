@@ -23,6 +23,7 @@
     <!ENTITY nary-relation SYSTEM "nary-relation.xml">
     <!ENTITY qualified-relation SYSTEM "qualified-relation.xml">
     <!ENTITY ordering-relation SYSTEM "ordering-relation.xml">
+    <!ENTITY document-type SYSTEM "document-type.xml">
 
   <!ENTITY publishing-patterns SYSTEM "publishing-patterns.xml">
     <!ENTITY annotation SYSTEM "annotation.xml">
