@@ -31,7 +31,7 @@ an <code>rdfs:label</code>)</para>
 
   <sect2><title>Further Reading</title>
   <itemizedlist>
-  <listitem><ulink linkend="http://www.jenitennison.com/blog/node/139">Creating Linked Data - Part V: Finishing Touches</ulink> (see section on Derivable Data)</listitem>
+  <listitem><ulink url="http://www.jenitennison.com/blog/node/139">Creating Linked Data - Part V: Finishing Touches</ulink> (see section on Derivable Data)</listitem>
   </itemizedlist>
   </sect2>
 </sect1>
