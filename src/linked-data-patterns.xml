@@ -35,6 +35,7 @@
     <!ENTITY edit-trail SYSTEM "edit-trail.xml">
     <!ENTITY link-base SYSTEM "link-base.xml">
     <!ENTITY progressive-enrichment SYSTEM "progressive-enrichment.xml">
+    <!ENTITY materialize-inferences SYSTEM "materialize-inferences.xml">
 
   <!ENTITY application-patterns SYSTEM "application-patterns.xml">
     <!ENTITY bounded-description SYSTEM "bounded-description.xml">
