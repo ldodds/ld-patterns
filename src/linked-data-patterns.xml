@@ -41,7 +41,7 @@
     <!ENTITY bounded-description SYSTEM "bounded-description.xml">
     <!ENTITY composite-descriptions SYSTEM "composite-descriptions.xml">
     <!ENTITY blackboard SYSTEM "blackboard.xml">
-    <!ENTITY schema-annotation SYSTEM "schema-annotation">
+    <!ENTITY schema-annotation SYSTEM "schema-annotation.xml">
 ]>
 <book>
 <bookinfo>
