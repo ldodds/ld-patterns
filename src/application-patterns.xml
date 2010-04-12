@@ -9,7 +9,7 @@
 &blackboard;
 &bounded-description;
 &composite-descriptions;
+&resource-caching;
 &schema-annotation;
-&schema-caching;
 &transformation-query;
 </chapter>
