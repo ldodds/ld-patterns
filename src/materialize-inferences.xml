@@ -1,4 +1,4 @@
-<sect1>
+<sect1 id="materialize-inferences">
   <title>Materialize Inferences</title>
   <para> 
    <emphasis>How can data be published for use by clients with limited reasoning capabilities?</emphasis>

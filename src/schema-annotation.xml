@@ -1,4 +1,4 @@
-<sect1>
+<sect1 id="schema-annotation">
   <title>Schema Annotation</title>
   <para> 
    <emphasis>How can application-specific processing rules be externalized?</emphasis>

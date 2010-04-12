@@ -1,4 +1,4 @@
-<sect1>
+<sect1 id="document-type">
   <title>Document Type</title>
   <para> 
    <emphasis>How can some context be provided about a set of RDF triples published to the web?</emphasis>
