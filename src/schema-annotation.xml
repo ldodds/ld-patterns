@@ -31,8 +31,9 @@ ex:IgnoredProperty a rdfs:Property;
   </sect2>
 
   <sect2><title>Discussion</title>
-  <para>Simple annotations of classes and properties is a simple and easy way to externalize some common types of application configuration. RDF vocabularies are easily extended with additional properties, making them suitable for extension in this way. Using this approach applications can be very easily tailored to work with a range of different vocabularies. Annotations may encode a wider range of configuration options including: display preferences, validation constraints, identifier assignment rules for classes, and local labelling for classes and properties.</para>
-  <para>These annotations would typically form part of the overall application configuration, and would be applied locally, rather than being published to the open web.</para>
+  <para>Simple annotations of classes and properties is a simple and easy way to externalize some common types of application configuration. RDF vocabularies are easily extended with additional properties, making them suitable for extension in this way. Using this approach applications can be very easily tailored to work with a range of different vocabularies.</para>
+  <para>Annotations may encode a wide range of configuration options including: display preferences, validation constraints, identifier assignment rules for classes, and local labelling for classes and properties. Annotation may even be used to tailor inferencing over specific vocabularies to allow for more local customisation and control over how inferencing is applied; for example a local schema annotation might declare that two classes were equivalent, or that a specific property is an inverse-functional-property, triggering data to be merged.</para>
+  <para>Schema annotations would typically form part of the overall application configuration and would be applied locally, rather than being published to the open web.</para>
   </sect2>
 
   <sect2><title>Related</title>
