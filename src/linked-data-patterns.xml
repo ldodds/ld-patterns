@@ -38,6 +38,7 @@
     <!ENTITY materialize-inferences SYSTEM "materialize-inferences.xml">
 
   <!ENTITY application-patterns SYSTEM "application-patterns.xml">
+    <!ENTITY assertion-query SYSTEM "assertion-query.xml">
     <!ENTITY bounded-description SYSTEM "bounded-description.xml">
     <!ENTITY composite-descriptions SYSTEM "composite-descriptions.xml">
     <!ENTITY blackboard SYSTEM "blackboard.xml">
