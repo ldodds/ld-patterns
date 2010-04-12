@@ -43,6 +43,8 @@
     <!ENTITY blackboard SYSTEM "blackboard.xml">
     <!ENTITY schema-annotation SYSTEM "schema-annotation.xml">
     <!ENTITY schema-caching SYSTEM "schema-caching.xml">
+    <!ENTITY transformation-query SYSTEM "transformation-query.xml">
+
 ]>
 <book>
 <bookinfo>
