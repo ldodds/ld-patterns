@@ -10,4 +10,5 @@
 &bounded-description;
 &composite-descriptions;
 &schema-annotation;
+&schema-caching;
 </chapter>
