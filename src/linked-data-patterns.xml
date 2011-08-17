@@ -9,6 +9,7 @@
     <!ENTITY literal-keys SYSTEM "literal-keys.xml">
     <!ENTITY shared-keys SYSTEM "shared-keys.xml">
     <!ENTITY proxy-uris SYSTEM "proxy-uris.xml">
+	<!ENTITY url-slug SYSTEM "url-slug.xml">    
 
   <!ENTITY modelling-patterns SYSTEM "modelling-patterns.xml">
     <!ENTITY repeated-property SYSTEM "repeated-property.xml">
