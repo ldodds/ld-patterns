@@ -1,7 +1,10 @@
 STYLESHEETS_DIR = /usr/share/xml/docbook/stylesheet/docbook-xsl
 
-all: single-file pdf pages epub
+all: date single-file pdf pages epub
 
+date:
+	date +%Y-%m-%d >src/date.txt
+    
 pages:
 	xsltproc --stringparam base.dir "book/" \
 		--stringparam chunk.first.sections "1" \
