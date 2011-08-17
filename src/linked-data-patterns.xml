@@ -24,6 +24,7 @@
     <!ENTITY qualified-relation SYSTEM "qualified-relation.xml">
     <!ENTITY ordering-relation SYSTEM "ordering-relation.xml">
     <!ENTITY document-type SYSTEM "document-type.xml">
+    <!ENTITY label-everything SYSTEM "label-everything.xml">    
 
   <!ENTITY publishing-patterns SYSTEM "publishing-patterns.xml">
     <!ENTITY annotation SYSTEM "annotation.xml">
@@ -46,6 +47,8 @@
     <!ENTITY resource-caching SYSTEM "resource-caching.xml">
     <!ENTITY transformation-query SYSTEM "transformation-query.xml">
 
+  <!ENTITY date SYSTEM "date.txt">
+  
 ]>
 <book>
 <bookinfo>
@@ -53,8 +56,10 @@
   <subtitle>A pattern catalogue for modelling, publishing, and consuming Linked Data</subtitle>
   <author><firstname>Leigh</firstname><surname>Dodds</surname></author>
   <author><firstname>Ian</firstname><surname>Davis</surname></author>
+  <pubdate>&date;</pubdate>
   <abstract>
   <para>This book lives at <ulink url="http://patterns.dataincubator.org">http://patterns.dataincubator.org</ulink>. Check that website for the latest version.</para>
+  <para>The book is also available as both a <ulink url="http://patterns.dataincubator.org/book/linked-data-patterns.pdf">PDF</ulink> and <ulink url="http://patterns.dataincubator.org/book/linked-data-patterns.epub">EPUB</ulink> download.</para>
   <para>This work is licenced under the Creative Commons Attribution 2.0 UK: England &amp; Wales License. To view a copy of this licence, visit <ulink url="http://creativecommons.org/licenses/by/2.0/uk/">http://creativecommons.org/licenses/by/2.0/uk/</ulink>.
   </para>
   <para>Thanks to members of the <ulink url="http://lists.w3.org/Archives/Public/public-lod/">Linked Data mailing list</ulink> for their feedback and input, and <ulink url="http://twitter.com/MrDys/">Sean Hannan</ulink> for contributing some CSS to style the online book.</para>
