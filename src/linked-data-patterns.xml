@@ -25,7 +25,8 @@
     <!ENTITY qualified-relation SYSTEM "qualified-relation.xml">
     <!ENTITY ordering-relation SYSTEM "ordering-relation.xml">
     <!ENTITY document-type SYSTEM "document-type.xml">
-    <!ENTITY label-everything SYSTEM "label-everything.xml">    
+    <!ENTITY label-everything SYSTEM "label-everything.xml">
+    <!ENTITY link-not-label SYSTEM "link-not-label.xml">
 
   <!ENTITY publishing-patterns SYSTEM "publishing-patterns.xml">
     <!ENTITY annotation SYSTEM "annotation.xml">

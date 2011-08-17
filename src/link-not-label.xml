@@ -1,0 +1,99 @@
+<sect1 id="link-not-label">
+  <title>Link Not Label</title>
+  <para> 
+   <emphasis>How do we model a dataset to maximise benefits of a graph based model?</emphasis>
+  </para>
+
+  <sect2><title>Context</title>
+  <para>Most datasets are centred around a few core resources types that are central to that dataset. For example a social network 
+  dataset would be centred on people, groups and organizations, whereas a publishing dataset would be centred on authors, 
+  publications and publishers.</para>
+  <para>However every dataset typically has some additional resource types that are less "central". E.g areas 
+  or topics of interest, spoken or print languages, publication formats, etc. Often these resources are over-looked during 
+  modelling and are often only represented as simple literal values. This can make it less efficient to query a dataset, e.g. to group resources 
+  based on shared characteristics (e.g. everyone with same interests, all hardback books). It can also limit the 
+  <link linkend="annotation">annotate</link> these 
+  aspects of a dataset, e.g. in order to add <link linkend="equivalence-links">equivalence links</link>.</para>
+  <para>Many common modelling approaches or industry standard models often re-inforce a less expressive modelling approach. For 
+  example many publishing and library standards, while encouraging use of controlled terms and authority files, focus largely on 
+  publications as the only important entity in a data model, leaving subject categories and authors as little more than labels associated 
+  with a work.</para>
+  </sect2>
+
+  <sect2><title>Solution</title>
+  <para>Ensure that all resources in a dataset are modelled as resources rather than simple literal values. Relate resources together to 
+  create a richer graph model. Use the literal values as the labels of the new resources.</para>
+  <para>A good approach is to look for any controlled vocabularies, keywords, tags, or annotations and dimensions in a dataset and 
+  model them as resources. Even structured literal values like dates might be more usefully modelled as resources.</para>
+  </sect2>
+
+  <sect2><title>Example(s)</title>
+  <para>Example of potential resources that might get overlooked:</para>
+  <itemizedlist>
+  <listitem>Languages</listitem>
+  <listitem>Country codes</listitem>
+  <listitem>Tags, categories, or subject headings</listitem>
+  <listitem>Gender</listitem>
+  <listitem>Genres</listitem>  
+  <listitem>Formats</listitem>
+  </itemizedlist>
+  <para>A simple example:</para>
+<programlisting>
+<![CDATA[
+#Rather than this:
+<http://www.example.org/book/1>
+  dc:format "Hardback";
+  dc:lang "en"
+  dc:subject "RDF", "SPARQL".
+  
+#Use a richer model:
+<http://www.example.org/book/1>
+  dcterms:format <http://example.org/formats/hardback>;
+  dcterms:lang <http://www.lingvoj.org/lingvo/en>;
+  dcterms:subject <http://example.org/category/rdf>;
+  dcterms:subject <http://example.org/category/sparql>.
+  
+<http://example.org/formats/hardback>
+  rdfs:label "Hardback".
+  
+<http://example.org/category/rdf>
+  rdfs:label "RDF".  
+  
+<http://example.org/category/sparql>
+  rdfs:label "SPARQL".
+  
+#Categories could later be related to other sources
+<http://example.org/category/rdf>
+   owl:sameAs <http://id.loc.gov/authorities/sh2003010124#concept>;
+   owl:sameAs <http://rdf.freebase.com/ns/authority.us.gov.loc.sh.sh2003010124>.  
+]]>
+</programlisting>  
+  </sect2>
+
+  <sect2><title>Discussion</title>
+  <para>Creating a rich graph of relationships within a dataset will yield more flexibility and value from adopting Linked Data.</para>
+  
+  <para>For example, as RDF triple stores are optimized for storing and querying relationships and graph patterns, creating resources 
+  for common dimensions in a dataset will allow for faster and more flexible querying. By representing these dimensions are resources in 
+  their own right, then they can be more easily annotated, e.g. to qualify them with additional data, or relate them to external sources.</para>
+  
+  <para>In many cases existing resources in publically available datasets can be used instead of creating new URIs. By using resources, 
+  and reusing identifiers, it becomes easier to correlate and traverse different datasets. For example it becomes possible to 
+  draw in external data to enrich an existing application, e.g. an author profile or related works in another collection.</para>
+  
+  </sect2>
+
+  <sect2><title>Related</title>
+  <itemizedlist>
+  <listitem><link linkend="annotation">Annotation</link></listitem>
+  <listitem><link linkend="equivalence-links">Equivalence Links</link></listitem>  
+  </itemizedlist>
+  </sect2>
+
+  <sect2><title>Further Reading</title>
+  <itemizedlist>
+  <listitem><ulink linkend="http://consulting.talis.com/2011/06/why-resources-in-linked-data-are-good/">Why Resources in Linked Data are Good</ulink></listitem>
+  </itemizedlist>
+  </sect2>
+  
+</sect1>
