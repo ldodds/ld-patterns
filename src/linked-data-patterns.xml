@@ -39,6 +39,7 @@
     <!ENTITY link-base SYSTEM "link-base.xml">
     <!ENTITY progressive-enrichment SYSTEM "progressive-enrichment.xml">
     <!ENTITY materialize-inferences SYSTEM "materialize-inferences.xml">
+    <!ENTITY embedded-metadata SYSTEM "embedded-metadata.xml">
 
   <!ENTITY application-patterns SYSTEM "application-patterns.xml">
     <!ENTITY assertion-query SYSTEM "assertion-query.xml">

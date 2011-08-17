@@ -10,6 +10,7 @@
 &autodiscovery;
 &document-type;
 &edit-trail;
+&embedded-metadata;
 &equivalence-links;
 &link-base;
 &materialize-inferences;
