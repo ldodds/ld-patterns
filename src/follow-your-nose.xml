@@ -40,7 +40,7 @@
   <para>An application might also want to limit network traffic by performing <link linkend="resource-caching">Resource Caching</link>.</para>
   <para>The retrieved data will often be parsed into one RDF graph that can then be queried or manipulated within the application. This "working set" 
   might be cached as well as the original source descriptions, to allow for the fact that the same data may be repeatedly referenced.</para>
-  <para>Some additional processing may also be carried out on the retrieved data, e.g. to apply inferencing to <link linkend="equivalence-links">Equivalence Links</link> 
+  <para>Some additional processing may also be carried out on the retrieved data, e.g. to apply <link linkend="smushing">Smushing</link> 
   to combine all available data about a resource into a single description.</para>
   </sect2>
 
@@ -48,6 +48,7 @@
   <itemizedlist>
   <listitem><link linkend="missing-isnt-broken">Missing Isn't Broken</link></listitem>
   <listitem><link linkend="see-also">See Also</link></listitem>
+  <listitem><link linkend="smushing">Smushing</link></listitem>
   <listitem><link linkend="resource-caching">Resource Caching</link></listitem>
   </itemizedlist>
   </sect2>
