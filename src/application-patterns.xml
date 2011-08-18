@@ -12,6 +12,8 @@
 &composite-descriptions;
 &follow-your-nose;
 &missing-isnt-broken;
+&parallel-loading;
+&parallel-retrieval;
 &resource-caching;
 &schema-annotation;
 &smushing;

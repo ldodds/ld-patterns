@@ -52,6 +52,8 @@
     <!ENTITY missing-isnt-broken SYSTEM "missing-isnt-broken.xml">
     <!ENTITY follow-your-nose SYSTEM "follow-your-nose.xml">
     <!ENTITY smushing SYSTEM "smushing.xml">
+    <!ENTITY parallel-retrieval SYSTEM "parallel-retrieval.xml">
+    <!ENTITY parallel-loading SYSTEM "parallel-loading.xml">
 
   <!ENTITY date SYSTEM "date.txt">
   

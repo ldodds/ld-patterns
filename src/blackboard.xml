@@ -33,6 +33,7 @@
   <sect2><title>Related</title>
   <itemizedlist>
   <listitem><link linkend="progressive-enrichment">Progressive Enrichment</link></listitem>
+  <listitem><link linkend="parallel-loading">Parallel Loading</link></listitem>
   </itemizedlist>
   </sect2>
 </sect1>

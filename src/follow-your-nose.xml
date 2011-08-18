@@ -37,7 +37,8 @@
   limit the data retrieved, e.g. by only following certain types of relationship or restricting the domains from which data will be retrieved. 
   The former allows a more directed "crawl" to find related information, while the latter allows simple white/black-listing to only obtain data 
   from trusted sources.</para>
-  <para>An application might also want to limit network traffic by performing <link linkend="resource-caching">Resource Caching</link>.</para>
+  <para>An application might also want to limit network traffic by performing <link linkend="resource-caching">Resource Caching</link>. 
+  <link linkend="parallel-retrieval">Parallel Retrieval</link> can also improve performance</para>
   <para>The retrieved data will often be parsed into one RDF graph that can then be queried or manipulated within the application. This "working set" 
   might be cached as well as the original source descriptions, to allow for the fact that the same data may be repeatedly referenced.</para>
   <para>Some additional processing may also be carried out on the retrieved data, e.g. to apply <link linkend="smushing">Smushing</link> 
@@ -50,6 +51,7 @@
   <listitem><link linkend="see-also">See Also</link></listitem>
   <listitem><link linkend="smushing">Smushing</link></listitem>
   <listitem><link linkend="resource-caching">Resource Caching</link></listitem>
+  <listitem><link linkend="parallel-loading">Parallel Retrieval</link></listitem>
   </itemizedlist>
   </sect2>
 
