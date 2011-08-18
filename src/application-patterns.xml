@@ -10,6 +10,8 @@
 &blackboard;
 &bounded-description;
 &composite-descriptions;
+&follow-your-nose;
+&missing-isnt-broken;
 &resource-caching;
 &schema-annotation;
 &transformation-query;

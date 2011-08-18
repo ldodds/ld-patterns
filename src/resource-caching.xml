@@ -18,4 +18,10 @@
   <para>Ideally applications should provide configuration to support the user in managing the amount of local resources (memory or disk space) that can be used by the cache. Control over the location in which cached data will be stored is also useful.</para>
   </sect2>
 
+  <sect2><title>Related</title>
+  <itemizedlist>
+  <listitem><link linkend="follow-your-nose">Follow Your Nose</link></listitem>
+  </itemizedlist>
+  </sect2>
+
 </sect1>

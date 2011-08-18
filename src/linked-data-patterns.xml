@@ -49,6 +49,8 @@
     <!ENTITY schema-annotation SYSTEM "schema-annotation.xml">
     <!ENTITY resource-caching SYSTEM "resource-caching.xml">
     <!ENTITY transformation-query SYSTEM "transformation-query.xml">
+    <!ENTITY missing-isnt-broken SYSTEM "missing-isnt-broken.xml">
+    <!ENTITY follow-your-nose SYSTEM "follow-your-nose.xml">
 
   <!ENTITY date SYSTEM "date.txt">
   

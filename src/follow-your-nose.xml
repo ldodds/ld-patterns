@@ -1,0 +1,55 @@
+<sect1 id="follow-your-nose">
+  <title>Follow Your Nose</title>
+  <para> 
+   <emphasis>How do we find additional relevant data from the web?</emphasis>
+  </para>
+
+  <sect2><title>Context</title>
+  <para>When we retrieve some data from a URI, we are unlikely to have obtained all of the relevant data about 
+  that resource. Additional statements or useful extra context may be available from both the original source, as well as 
+  other third-party sources on the web.</para>
+  </sect2>
+
+  <sect2><title>Solution</title>
+  <para>Identify additional useful links within the available data, and then de-reference those URIs in turn to find the 
+  additional data.</para>
+  </sect2>
+
+  <sect2><title>Example(s)</title>
+  <para>The BBC Wildlife Finder application exposes data about biological species. By following links within the data we can 
+  find additional information about related species or its habitat from within the same dataset. By following links to dbpedia 
+  or other sources, we can find additional detail on the biology and distribution of the species.</para>
+  </sect2>
+
+  <sect2><title>Discussion</title>
+  <para>This pattern is at the core of the Linked Data approach. By giving resources URIs we make them part of the web, allowing a 
+  description of them to be retrieved by a simple HTTP GET request. By linking to other resources on the web, we allow applications to 
+  find more information by repeatedly following links to crawl the additional sources.</para>
+  <para>There are two main types of links that could be followed in an RDF graph:</para>
+  <itemizedlist>
+  <listitem>URIs of other resources -- <link linkend="see-also">See Also</link> links to further documents, or URIs of 
+  other related resources. Follow these links to find more data.</listitem>
+  <listitem>URIs of RDF terms -- links to definitions of properties, classes and other terms. Follow these links to find 
+  machine-readable descriptions of terms</listitem>  
+  </itemizedlist>
+  <para>An application is unlikely to want to blindly follow all links. For example applications will certainly want to place a 
+  limit on how many additional links it will want to fetch, e.g. one or two hops from the original resource. An application may also want to 
+  limit the data retrieved, e.g. by only following certain types of relationship or restricting the domains from which data will be retrieved. 
+  The former allows a more directed "crawl" to find related information, while the latter allows simple white/black-listing to only obtain data 
+  from trusted sources.</para>
+  <para>An application might also want to limit network traffic by performing <link linkend="resource-caching">Resource Caching</link>.</para>
+  <para>The retrieved data will often be parsed into one RDF graph that can then be queried or manipulated within the application. This "working set" 
+  might be cached as well as the original source descriptions, to allow for the fact that the same data may be repeatedly referenced.</para>
+  <para>Some additional processing may also be carried out on the retrieved data, e.g. to apply inferencing to <link linkend="equivalence-links">Equivalence Links</link> 
+  to combine all available data about a resource into a single description.</para>
+  </sect2>
+
+  <sect2><title>Related</title>
+  <itemizedlist>
+  <listitem><link linkend="missing-isnt-broken">Missing Isn't Broken</link></listitem>
+  <listitem><link linkend="see-also">See Also</link></listitem>
+  <listitem><link linkend="resource-caching">Resource Caching</link></listitem>
+  </itemizedlist>
+  </sect2>
+
+</sect1>
