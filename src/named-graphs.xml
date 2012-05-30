@@ -1,22 +1,49 @@
 <sect1 id="named-graphs">
-  <title>Named Graphs</title>
+  <title>Named Graph</title>
   <para> 
-   <emphasis>How do we organize and annotate a set of RDF statements?</emphasis>
+   <emphasis>How can we identify a useful sub-set of RDF triples within a triple store?</emphasis>
   </para>
 
   <sect2><title>Context</title>
-  <para>The RDF model treats triples as a single collection of statements. For many scenarios it is useful to have some additional structure or grouping to the data. E.g. to identify all triples from a particular source, or created on a specific date. It is useful to be able to describe and annotate these collections just like any other resource.</para>
+  <para>A triplestore is a set of RDF triples. Upon loading some RDF data into such a collection we lose the ability to be able to identify a sub-set of RDF triples, e.g. to identify their source of origin. We also lose knowledge of whether a single triple was asserted once or multiple times, e.g. by separate distinct sources. While it is possible to extract triples based on particular graph patterns, e.g. all triples with the same subject, predicate, or object there is no way to recover the original contect.</para>
+
   </sect2>
 
   <sect2><title>Solution</title>
   <para>Use URIs to identify collections of statements. Where necessary associate a triple with this URI to create a <emphasis>quad</emphasis></para>
+  <para>By assigning a URI to a set of triples and my retaining that additional identifier in the store (a <emphasis>quad store</emphasis>), we can either treat the whole collection as a single set of triples, or work with an subset based on its graph identifier.</para>
+  </sect2>
+
+  <sect2><title>Example(s)</title>
+  <para>The following example shows an RDF graph using the TRiG notation (Turtle plus graphs)</para>
+
+<programlisting>
+<![CDATA[
+@prefix ex: <http://www.example.org/> .
+
+#Named graph in TRiG
+<http://www.example.org/graph/1> { 
+		<http://www.example.org/document/7> rdfs:label "Example". 
+}
+]]>
+</programlisting>  
+
+  <para>The following example shows an RDF graph using the NQuads notation (N-Triples plus graphs)</para>
+
+<programlisting>
+<![CDATA[
+<http://www.example.org/document/7> rdfs:label "Example" <http://www.example.org/graph/1>. 
+]]>
+</programlisting>  
+
+	<para>In both cases the graphs contain a single RDF triple</para>
   </sect2>
 
   <sect2><title>Discussion</title>
-  <para>RDF triple stores have for some time allowed sets of statements to be grouped into identifiable sets. Using a URI for this identifier means that such named graphs can themselves be described using RDF. E.g. to say when they were created, how they were authored, etc. SPARQL 1.0 has, to some extent, standardised this capability, allowing queries to be made across all or selected named graphs. Syntaxes for serialising named graphs also exist, allowing quads to be exchanged between systems. These syntaxes include NQuads, Trix, and TriG.</para>
-  <para>By essentially extending the core RDF model from a triple to a quad, Named Graphs provide an extra degree of freedom in managing RDF datasets. This means that they are an increasingly important part of the RDF toolset, supporting a number of different application scenarios as well as a more manageable alternative to <link linkend="reified-statement">reification</link> for handling versioning and provenance in datasets.</para>
-  <para>However there is no agreed meaning for this extra data element. The RDF data model describes sets of triples, but doesn't standardise any method of referring to or labelling a set. So in one application the graph identifier could be a simple label used to identify a set of triples, whereas in another it may identify the source URI from which some data was retrieved.</para>
-  <para>Some recorded uses for Named Graphs include:
+  <para>The idea of extending the triple into a quad, through the addition of an additional URI has been around for many years. The Many early triple stores supported the notion of a quad, with the majority now supporting named graphs as a key feature. SPARQL 1.0 was the first semantic web specification to directly reference the concept, allowing queries to be addressed to an individual named graph or a collection of graphs. Syntaxes for serialising named graphs also exist, allowing quads to be exchanged between systems. The most commmonly used quad syntaxes are TRiG (a derivative of Turtle) and NQuads (a derivative of NTriples.</para>
+  <para>By extending the core RDF model from a triple to a quad, Named graphs provide a useful extra degree of freedom when managing an RDF dataset. A useful analogy when thinking about a quad store is that of a collection of documents: each named graph is a separate "document" in the database that can be manipulated independently from any others. However the document identifier (the graph URI) can be ignored when working with data, relying on RDF graph merging rules to provide a view across all documents. A graph store therefore offers a useful way to manage sets of statements without losing the ability to easily merge data from across sources.</para>
+  <para>
+  Graphs have been usefully applied to solving a number of different data management problems in RDF applications. Some recorded uses for Named Graphs include:
    <itemizedlist>
     <listitem><emphasis>Tracking provenance of RDF data</emphasis> — here the extra URI is used to track the source of the data; especially useful for web crawling scenarios</listitem>
     <listitem><emphasis>Replication of RDF graphs</emphasis> — triples are grouped into sets, labelled by a URI, that may then be separately exchanged and replicated</listitem>
@@ -25,11 +52,15 @@
     <listitem><emphasis>Access Control</emphasis> — by identifying sets of triples we can then record access control related metadata</listitem>
    </itemizedlist>
   </para>
+  
+  <para>The lack of standardisation about what the graph URI associated with a named graph identifies means that different applications have used it for different purposes. For example one application might simply use the URI as a local identifier for a set of triples, whereas another might associate extra semantics with the URI, e.g. using it to hold the URL from which the data was originally retrieved.</para>
+  <para>The simplest way to thing about the graph URI is as a simple identifier or label that can be associated with some triples. The fact that the identifier is a URI has some added benefits. For example we could then capture RDF statements to describe the graph. This has been applied as an alternative to <link linkend="reified-statement">reification</link> for handling versioning and provenance in datasets, but <link linkend="graph-annotation">graph annotation</link> is useful in a number of scenarios.</para>
   </sect2>
 
   <sect2><title>Related</title>
   <itemizedlist>
   <listitem><link linkend="reified-statement">Reified Statement</link></listitem>
+  <listitem><link linkend="graph-annotation">Graph Annotation</link></listitem>
   </itemizedlist>
   </sect2>
 </sect1>

@@ -10,6 +10,7 @@
     <!ENTITY shared-keys SYSTEM "shared-keys.xml">
     <!ENTITY proxy-uris SYSTEM "proxy-uris.xml">
 	<!ENTITY url-slug SYSTEM "url-slug.xml">    
+    <!ENTITY rebased-uri SYSTEM "rebased-uri.xml">
 
   <!ENTITY modelling-patterns SYSTEM "modelling-patterns.xml">
     <!ENTITY repeated-property SYSTEM "repeated-property.xml">
@@ -32,7 +33,6 @@
     <!ENTITY annotation SYSTEM "annotation.xml">
     <!ENTITY see-also SYSTEM "see-also.xml">
     <!ENTITY equivalence-links SYSTEM "equivalence-links.xml">
-    <!ENTITY named-graphs SYSTEM "named-graphs.xml">
     <!ENTITY autodiscovery SYSTEM "autodiscovery.xml">
     <!ENTITY primary-topic-autodiscovery SYSTEM "primary-topic-autodiscovery.xml">
     <!ENTITY edit-trail SYSTEM "edit-trail.xml">
@@ -40,6 +40,14 @@
     <!ENTITY progressive-enrichment SYSTEM "progressive-enrichment.xml">
     <!ENTITY materialize-inferences SYSTEM "materialize-inferences.xml">
     <!ENTITY embedded-metadata SYSTEM "embedded-metadata.xml">
+
+  <!ENTITY data-management-patterns SYSTEM "data-management-patterns.xml">
+    <!ENTITY graph-per-source SYSTEM "graph-per-source.xml">
+    <!ENTITY graph-annotation SYSTEM "graph-annotation.xml">
+    <!ENTITY graph-per-resource SYSTEM "graph-per-resource.xml">
+    <!ENTITY named-graphs SYSTEM "named-graphs.xml">
+    <!ENTITY union-graph SYSTEM "union-graph.xml">
+    <!ENTITY graph-per-aspect SYSTEM "graph-per-aspect.xml">
 
   <!ENTITY application-patterns SYSTEM "application-patterns.xml">
     <!ENTITY assertion-query SYSTEM "assertion-query.xml">
@@ -54,6 +62,9 @@
     <!ENTITY smushing SYSTEM "smushing.xml">
     <!ENTITY parallel-retrieval SYSTEM "parallel-retrieval.xml">
     <!ENTITY parallel-loading SYSTEM "parallel-loading.xml">
+    <!ENTITY parameterised-query SYSTEM "parameterised-query.xml">
+    <!ENTITY named-query SYSTEM "named-query.xml">
+    <!ENTITY uri-resolver SYSTEM "uri-resolver.xml">
 
   <!ENTITY date SYSTEM "date.txt">
   
@@ -79,6 +90,7 @@
 &identifier-patterns;
 &modelling-patterns;
 &publishing-patterns;
+&data-management-patterns;
 &application-patterns;
 
 </book>	

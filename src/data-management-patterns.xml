@@ -1,0 +1,16 @@
+<chapter id="data-management-patterns">
+  <title>Data Management Patterns</title>
+  <chapterinfo>
+  <abstract>
+  <para>This chapter introduces a collection of patterns that relate to methods for managing and organsing RDF data. The majority of the patterns relate to the use of named graphs for organising data held in a triple store.</para>
+  </abstract>
+  </chapterinfo>
+
+&graph-annotation;
+&graph-per-aspect;
+&graph-per-resource;
+&graph-per-source;
+&named-graphs;
+&union-graph;
+
+</chapter>
