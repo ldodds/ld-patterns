@@ -76,7 +76,7 @@
 </programlisting>
 
 	<para>In the <link linkend="data-management-patterns">Data Management Patterns</link> section of the book a number of the examples use the 
-<ulink url="http://www4.wiwiss.fu-berlin.de/bizer/trig/"></ulink>TRiG syntax, which is an extension of Turtle that supports Named Graphs.</para>
+<ulink url="http://www4.wiwiss.fu-berlin.de/bizer/trig/">TRiG</ulink> syntax, which is an extension of Turtle that supports Named Graphs.</para>
 	</sect2>
 
   </sect1>
