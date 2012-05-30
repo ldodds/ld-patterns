@@ -12,10 +12,13 @@
 &composite-descriptions;
 &follow-your-nose;
 &missing-isnt-broken;
+&named-query;
 &parallel-loading;
 &parallel-retrieval;
+&parameterised-query;
 &resource-caching;
 &schema-annotation;
 &smushing;
 &transformation-query;
+&uri-resolver;
 </chapter>
