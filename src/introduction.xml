@@ -57,24 +57,26 @@
 
 	<para>The pattern catalogue includes a number of examples. Snippets of code, data, or queries that help to illustrate a specific pattern. Code examples are shown in this font.</para>
 
-	<para>Where we should examples of RDF data, we have used the <ulink url="http://www.w3.org/TeamSubmission/turtle/">Turtle</ulink> syntax for RDF because its more concise and readable than RDF/XML. We have preferred to use prefixed names for standard RDF properties and classes, but do not include the declarations of these prefixes in the examples.</para>
+	<para>Where we should examples of RDF data, we have used the <ulink url="http://www.w3.org/TeamSubmission/turtle/">Turtle</ulink> syntax for RDF because its more concise and readable than RDF/XML. We have preferred to use prefixed names for standard RDF properties and classes but, for clarity, have not always included the declarations of these prefixes in the examples. This allows the example to focus on the particular usage being demonstrated.</para>
 
 	<para>Unless otherwise stated, assume that when you're looking at some Turtle we've declared the following prefixes:</para>
 
 <programlisting>
 <![CDATA[
-        @prefix ex: <http://www.example.org/>
-	@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-	@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-	@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-	@prefix dcterms: <http://purl.org/dc/terms/> .
-	@prefix dc: <http://purl.org/dc/elements/1.1/> .
-	@prefix owl: <http://www.w3.org/2002/07/owl#> .
-	@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-	@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://www.example.org/>
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 ]]>
 </programlisting>
 
+	<para>In the <link linkend="data-management-patterns">Data Management Patterns</link> section of the book a number of the examples use the 
+<ulink url="http://www4.wiwiss.fu-berlin.de/bizer/trig/"></ulink>TRiG syntax, which is an extension of Turtle that supports Named Graphs.</para>
 	</sect2>
 
   </sect1>
