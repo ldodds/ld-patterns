@@ -1,0 +1,39 @@
+<sect1 id="rebased-uri">
+  <title>Rebased URI</title>
+  <para> 
+   <emphasis>How can we construct one URI based on another?</emphasis>
+  </para>
+
+  <sect2><title>Context</title>
+  <para>Sometimes when generating a <link linkend="patterned-uris">Patterned URI</link> the key that we have for as <link linkend="url-slug">URL Slug</link> is not a simple literal value, but instead another URI. For example this can occur when generating a new Named Graph URI for a resource, or when defining a service URL for a <link linkend="uri-resolver">URI Resolver</link>.</para>
+  </sect2>
+
+  <sect2><title>Solution</title>
+  <para>Rewrite the original URI to use a new, predictable base URI using on of the options described below.</para>
+  </sect2>
+
+  <sect2><title>Example(s)</title>
+  <para>An application needs to generate a new Named Graph URI for a resource URI of <code>http://example.org/document/1</code>. The application uses a regular expression to rewrite the original URI to a new base, e.g. <code>http://graphs.example.org/document/1</code>.</para>
+  </sect2>
+
+  <sect2><title>Discussion</title>
+  <para>URL rewriting is a common feature of all web servers and most web frameworks. Rewriting is normally carried out using regular expressions to match and replace portions of the original URI with some standard replacement text.</para>
+  <para>URL rewriting is used in several Linked Data services in order to create new URLs. This is typically to support <link linkend="uri-resolver">URI resolution</link> for remote (RDF) resources.</para>
+  <para>Several different approaches seem to be in use. The following examples all show a rewrite for this URI: <code>http://example.org/document/1</code>. Each example notes an example service that uses the approach:
+	<itemizedlist>
+		<listitem><emphasis>Simple Prefixing</emphasis> (URIBurnder): <code>http://service.example.com/resolve/http://example.org/document/1</code>. The original URI is simply appended to a new base URL. Has the advantage of working with any protocol.</listitem>
+		<listitem><emphasis>Prefixing, No Protocol</emphasis> (Triplr): <code>http://service.example.com/resolve/example.org/document/1</code>. The original URI is simply appended to a new base URL after first removing the protocol (e.g. "http://"). Server will need to assume the <code>http</code> protocol if de-referencing the URI or reversing the rewrite.</listitem>	
+		<listitem><emphasis>Prefixing, With Delimiter</emphasis> (Callimachus): <code>http://service.example.com/resolve;http://example.org/document/1</code>. The original URI is simply appended to a new base URL which ends with a semi-colon.</listitem>
+		<listitem><emphasis>Prefixing, As Parameter</emphasis>  (SPARQL Graph Protocol): <code>http://service.example.com/resolve?uri=http://example.org/document/1</code>. The original URI is simply appended to a new base URL as a query string parameter.</listitem>
+		<listitem><emphasis>Rewritten Authority</emphasis>: <code>http://data.example.org/document/1</code>. The authority component of the URI is rewritten to create a new base URI. This approach might lead to URI clashes unless the input URIs have a predictable structure.</listitem>
+	</itemizedlist>
+</para>
+  </sect2>
+
+  <sect2><title>Related</title>
+  <itemizedlist>
+  <listitem><link linkend="uri-resolver">URI resolver</link></listitem>
+  </itemizedlist>
+  </sect2>
+
+</sect1>
