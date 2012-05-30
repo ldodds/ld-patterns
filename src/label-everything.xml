@@ -48,11 +48,19 @@ ex:WeatherObservation
   same content, then this is an example of the <link linkend="materialize-inferences">Materialize Inference</link> pattern: <code>skos:prefLabel</code> is
   a specialization of <code>rdfs:label</code>.  
   </para>
+  <para>The importance of applying labels to Linked Data, as well as evidence for the poor adoption of this practice, is given in a paper called "Labels in the Web of Data" by Basil Ell, Denny Vrandečić, and Elena Simperl.</para>
   </sect2>
 
   <sect2><title>Related</title>
   <itemizedlist>
   <listitem><link linkend="preferred-label">Preferred Label</link></listitem>
+  </itemizedlist>
+  </sect2>
+
+  <sect2><title>Further Reading</title>
+  <itemizedlist>
+  <listitem><ulink linkend="http://www.aifb.kit.edu/images/c/c0/LabelsInTheWebOfData.pdf">Labels in the Web of Data (Paper)</ulink></listitem>
+  <listitem><ulink linkend="http://videolectures.net/iswc2011_ell_labels/">Labels in the Web of Data (Video Lecture + Slides)</ulink></listitem>
   </itemizedlist>
   </sect2>
 
