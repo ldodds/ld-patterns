@@ -25,6 +25,7 @@
 
 &annotation;
 &autodiscovery;
+&dataset-autodiscovery;
 &document-type;
 &edit-trail;
 &embedded-metadata;

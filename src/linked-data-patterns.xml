@@ -41,6 +41,7 @@
     <!ENTITY materialize-inferences SYSTEM "materialize-inferences.xml">
     <!ENTITY embedded-metadata SYSTEM "embedded-metadata.xml">
     <!ENTITY unpublish SYSTEM "unpublish.xml">
+    <!ENTITY dataset-autodiscovery SYSTEM "dataset-autodiscovery.xml">
 
   <!ENTITY data-management-patterns SYSTEM "data-management-patterns.xml">
     <!ENTITY graph-per-source SYSTEM "graph-per-source.xml">
