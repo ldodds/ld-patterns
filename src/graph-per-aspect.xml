@@ -44,10 +44,10 @@
 	<![CDATA[
 CONSTRUCT { ?s ?p ?o. }
 WHERE {
-  <http://data.example.org/graphs> {
+ GRAPH <http://data.example.org/graphs> {
    	  ?graph foaf:primaryTopic <http://example.org/document/1>.
   }
-  ?graph { ?s ?p ?o. }
+ GRAPH ?graph { ?s ?p ?o. }
 }
 ]]></programlisting> 
   </sect2>
