@@ -41,7 +41,7 @@ other sources might also be regularly converted into RDF and added to a triple s
 	<para>An application may need to be present to an end-user the list of locations from which some RDF statements have been found. This too can be achieved using a simple SPARQL query:</para>
 	<programlisting>
 	<![CDATA[SELECT ?graph WHERE {
-		?graph { 
+		GRAPH ?graph { 
   			<http://www.example.org/person/joe> foaf:name "Joe Bloggs". 
 		}
 	}]]></programlisting>  
