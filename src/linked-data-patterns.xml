@@ -9,7 +9,7 @@
     <!ENTITY literal-keys SYSTEM "literal-keys.xml">
     <!ENTITY shared-keys SYSTEM "shared-keys.xml">
     <!ENTITY proxy-uris SYSTEM "proxy-uris.xml">
-	<!ENTITY url-slug SYSTEM "url-slug.xml">    
+    <!ENTITY url-slug SYSTEM "url-slug.xml">    
     <!ENTITY rebased-uri SYSTEM "rebased-uri.xml">
 
   <!ENTITY modelling-patterns SYSTEM "modelling-patterns.xml">
@@ -81,7 +81,7 @@
   <abstract>
   <para>This book lives at <ulink url="http://patterns.dataincubator.org">http://patterns.dataincubator.org</ulink>. Check that website for the latest version.</para>
   <para>The book is also available as both a <ulink url="http://patterns.dataincubator.org/book/linked-data-patterns.pdf">PDF</ulink> and <ulink url="http://patterns.dataincubator.org/book/linked-data-patterns.epub">EPUB</ulink> download.</para>
-  <para>This work is licenced under the Creative Commons Attribution 2.0 UK: England &amp; Wales License. To view a copy of this licence, visit <ulink url="http://creativecommons.org/licenses/by/2.0/uk/">http://creativecommons.org/licenses/by/2.0/uk/</ulink>.
+  <para>This work is licensed under the Creative Commons Attribution 2.0 UK: England &amp; Wales License. To view a copy of this licence, visit <ulink url="http://creativecommons.org/licenses/by/2.0/uk/">http://creativecommons.org/licenses/by/2.0/uk/</ulink>.
   </para>
   <para>Thanks to members of the <ulink url="http://lists.w3.org/Archives/Public/public-lod/">Linked Data mailing list</ulink> for their feedback and input, and <ulink url="http://twitter.com/MrDys/">Sean Hannan</ulink> for contributing some CSS to style the online book.</para>
   </abstract>

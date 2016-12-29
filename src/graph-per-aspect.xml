@@ -19,7 +19,7 @@
 	<![CDATA[
 #core description of a resource; provided by user
 <http://data.example.org/graphs/core/document/1> {
-	<http://example.org/document/1> dct:title "Bath in the Summertime".
+	<http://example.org/document/1> dcterms:title "Bath in the Summertime".
 }    	
 #tags; maintained by process 1.
 <http://data.example.org/graphs/tags/document/1> {
@@ -28,7 +28,7 @@
 }    	
 #related links; maintained by process 2.
 <http://data.example.org/graphs/links/document/1> {
-	<http://example.org/document/1> dct:related <http://travel.example.org/doc/bath>.
+	<http://example.org/document/1> dcterms:related <http://travel.example.org/doc/bath>.
 }    	
 #System metadata graph, listing topic of each graph
 <http://data.example.org/graphs> { 
@@ -55,7 +55,7 @@ WHERE {
   <sect2><title>Discussion</title>
   <para>Named graphs provide flexibility in how to organise an RDF data store. In some cases storage is oriented towards the sources of data, in others around individual resources. The Graph Per Aspect pattern provides a combination of those features that allows for very fine-grained graph management. The description of each resource is divided over a number of graphs, each of which is contributed to the system by a different source or application component.</para>
   <para>As with the other named graph patterns reliance is made on the <link linkend="union-graph">Union Graph</link> pattern to bring together the description of a resource into a single consistent view.</para>
-  <para>Separating out aspects of resource description into different graphs also provides a way to shard a dataset. Different aspects might be stored in different triple stores across a network. These are then brought together in the application for building a user interface. With knowledge of how graphs are partitioned across the network, as well as which graphs contain which statements, an application can use <link linkend="parallel-retrieval">Parallel Retrieval</link> to synthesis a local working copy of a resource's description. This aggregation could happen within a server component or on the client-side</para>
+  <para>Separating out aspects of resource description into different graphs also provides a way to shard a dataset. Different aspects might be stored in different triple stores across a network. These are then brought together in the application for building a user interface. With knowledge of how graphs are partitioned across the network, as well as which graphs contain which statements, an application can use <link linkend="parallel-retrieval">Parallel Retrieval</link> to synthesise a local working copy of a resource's description. This aggregation could happen within a server component or on the client-side</para>
    <para>The small, focused graphs created by use of this pattern and, more generally, by the <link linkend="graph-per-resource">Graph Per Resource</link> pattern are very amenable for delivery to mobile &amp; web clients for local processing. By separating out the different aspects of a resource into graphs that are likely to change with differing frequencies, caching can be made much more efficient.</para>
   </sect2>
 

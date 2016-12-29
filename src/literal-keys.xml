@@ -9,11 +9,11 @@
   </sect2>
 
   <sect2><title>Solution</title>
-  <para>Create a custom property, as a sub-class of the dc:identifier property for relating the existing literal key value with the resource.</para>
+  <para>Create a custom property, as a sub-property of the dc:identifier property for relating the existing literal key value with the resource.</para>
   </sect2>
 
   <sect2><title>Example(s)</title>
-  <para>The nasa dataset in dataincubator uses <link linkend="patterned-uris">Patterned URIs</link> based on the NSSDC international designator, but includes these as literal values associated with each spacecraft using a custom property.</para>
+  <para>The NASA dataset in dataincubator uses <link linkend="patterned-uris">Patterned URIs</link> based on the NSSDC international designator, but includes these as literal values associated with each spacecraft using a custom property.</para>
   </sect2>
 
   <sect2><title>Discussion</title>

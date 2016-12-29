@@ -34,12 +34,12 @@ benefits of named graphs without having to teach all applications about the inte
   <itemizedlist>
     <listitem>a triple store may manage data either as a collection of named graphs, or directly as a SPARQL dataset, i.e. a default graph plus zero or more named graphs. In the latter case triples can be added/removed from the default graph</listitem>
     <listitem>a triple store may provide a view over its entire contents, regardless of the partitioning into graphs. This is the most common form of union graph. It is also likely to be efficient for pattern matching, etc. This union graph may be in addition to whatever basic storage options the store provides</listitem>
-    <listitem>a triple store may offer options for how a sparql dataset is created for a given query, or it may enforce a specific structure. E.g. a store may enforce that the default graph is a specific stored graph, or that it is a union graph providing a view of all of its contents</listitem>
-    <listitem>a triple store may offer some additional flexibility for a sparql query to define its dataset including specifying a single graph as the default, the store-wide union graph, or a query specific union graph which is populated by merging together a number of named graphs identified in the FROM clause of the query</listitem>
+    <listitem>a triple store may offer options for how a SPARQL dataset is created for a given query, or it may enforce a specific structure. E.g. a store may enforce that the default graph is a specific stored graph, or that it is a union graph providing a view of all of its contents</listitem>
+    <listitem>a triple store may offer some additional flexibility for a SPARQL query to define its dataset including specifying a single graph as the default, the store-wide union graph, or a query specific union graph which is populated by merging together a number of named graphs identified in the FROM clause of the query</listitem>
    </itemizedlist>
   </para>
   <para>Not all triple stores offer this kind of flexibility but many offer at least some options for querying the whole store as a union graph.</para>
-  <para>There is scope here for further innovation on the part of store implementors, e.g. to offer additional ways to either statically or dynamically create union graphs over a store. For example an application may want to identifier the most recently updated graphs; graphs with a particular kind of content; public and "private" graphs, etc.</para>
+  <para>There is scope here for further innovation on the part of store implementors, e.g. to offer additional ways to either statically or dynamically create union graphs over a store. For example an application may want to identify the most recently updated graphs; graphs with a particular kind of content; public and "private" graphs, etc.</para>
   </sect2>
 
   <sect2><title>Related</title>

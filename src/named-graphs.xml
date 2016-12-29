@@ -11,11 +11,11 @@
 
   <sect2><title>Solution</title>
   <para>Use URIs to identify collections of statements. Where necessary associate a triple with this URI to create a <emphasis>quad</emphasis></para>
-  <para>By assigning a URI to a set of triples and my retaining that additional identifier in the store (a <emphasis>quad store</emphasis>), we can either treat the whole collection as a single set of triples, or work with an subset based on its graph identifier.</para>
+  <para>By assigning a URI to a set of triples and by retaining that additional identifier in the store (a <emphasis>quad store</emphasis>), we can either treat the whole collection as a single set of triples, or work with a subset based on its graph identifier.</para>
   </sect2>
 
   <sect2><title>Example(s)</title>
-  <para>The following example shows an RDF graph using the TRiG notation (Turtle plus graphs)</para>
+  <para>The following example shows an RDF graph using the TriG notation (Turtle plus graphs)</para>
 
 <programlisting>
 <![CDATA[
@@ -28,7 +28,7 @@
 ]]>
 </programlisting>  
 
-  <para>The following example shows an RDF graph using the NQuads notation (N-Triples plus graphs)</para>
+  <para>The following example shows an RDF graph using the N-Quads notation (N-Triples plus graphs)</para>
 
 <programlisting>
 <![CDATA[
@@ -40,14 +40,14 @@
   </sect2>
 
   <sect2><title>Discussion</title>
-  <para>The idea of extending the triple into a quad, through the addition of an additional URI has been around for many years. The Many early triple stores supported the notion of a quad, with the majority now supporting named graphs as a key feature. SPARQL 1.0 was the first semantic web specification to directly reference the concept, allowing queries to be addressed to an individual named graph or a collection of graphs. Syntaxes for serialising named graphs also exist, allowing quads to be exchanged between systems. The most commmonly used quad syntaxes are TRiG (a derivative of Turtle) and NQuads (a derivative of NTriples.</para>
+  <para>The idea of extending the triple into a quad, through the addition of an additional URI has been around for many years. The Many early triple stores supported the notion of a quad, with the majority now supporting named graphs as a key feature. SPARQL 1.0 was the first semantic web specification to directly reference the concept, allowing queries to be addressed to an individual named graph or a collection of graphs. Syntaxes for serialising named graphs also exist, allowing quads to be exchanged between systems. The most commonly used quad syntaxes are TriG (a derivative of Turtle) and N-Quads (a derivative of N-Triples).</para>
   <para>By extending the core RDF model from a triple to a quad, Named graphs provide a useful extra degree of freedom when managing an RDF dataset. A useful analogy when thinking about a quad store is that of a collection of documents: each named graph is a separate "document" in the database that can be manipulated independently from any others. However the document identifier (the graph URI) can be ignored when working with data, relying on RDF graph merging rules to provide a view across all documents. A graph store therefore offers a useful way to manage sets of statements without losing the ability to easily merge data from across sources.</para>
   <para>
   Graphs have been usefully applied to solving a number of different data management problems in RDF applications. Some recorded uses for Named Graphs include:
    <itemizedlist>
     <listitem><emphasis>Tracking provenance of RDF data</emphasis> — here the extra URI is used to track the source of the data; especially useful for web crawling scenarios</listitem>
     <listitem><emphasis>Replication of RDF graphs</emphasis> — triples are grouped into sets, labelled by a URI, that may then be separately exchanged and replicated</listitem>
-    <listitem><emphasis>Managing RDF datasets</emphasis> — here the set of triples may be an entire RDF dataset, e.g. all of dbpedia, or all of musicbrainz, making it easier to identify and query subsets within an aggregation</listitem>
+    <listitem><emphasis>Managing RDF datasets</emphasis> — here the set of triples may be an entire RDF dataset, e.g. all of DBpedia, or all of MusicBrainz, making it easier to identify and query subsets within an aggregation</listitem>
     <listitem><emphasis>Versioning</emphasis> — the URI identifies a set of triples, and that URI may be separately described, e.g. to capture the creation &amp; modification dates of the triples in that set, who performed the change, etc.</listitem>
     <listitem><emphasis>Access Control</emphasis> — by identifying sets of triples we can then record access control related metadata</listitem>
    </itemizedlist>

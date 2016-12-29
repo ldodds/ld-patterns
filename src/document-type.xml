@@ -17,7 +17,7 @@
 <![CDATA[
 
 #document type
-foaf:PersonalProfileDocument a foaf:Document.
+foaf:PersonalProfileDocument rdfs:subClassOf foaf:Document.
 
 #specific instance of document, with indication of its topic
 <http://www.example.org/doc/john> a foaf:PersonalProfileDocument;

@@ -63,9 +63,8 @@
 <http://example.org/cameras/10>
   ex:manufacturer <http://example.org/company/5>.
 
-<http://example.org/company/5>.
-  ex:manufactured <http://example.org/cameras/10>.
-  ex:manufactured <http://example.com/product/6>.
+<http://example.org/company/5>
+  ex:manufactured <http://example.org/cameras/10>, <http://example.com/product/6>.
 ]]>
 </programlisting>  
   <para>We can also tidy up the graph to remove statements about the equivalent resources, leaving:</para>
@@ -76,7 +75,7 @@
   owl:sameAs <http://example.org/cameras/10>;  
   ex:manufacturer <http://example.org/company/5>.
   
-<http://example.org/company/5>.
+<http://example.org/company/5>
   ex:manufactured <http://example.com/product/6>.
 ]]>
 </programlisting>  

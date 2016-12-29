@@ -2,10 +2,8 @@
   <title>Introduction</title>
   <chapterinfo>
   <abstract>
-<para>There are many ways to help spread the adoption of a technology, and to share skills and experience amongst a community of practitioners. Different approaches work well for communicating different kinds of knowledge. And we all individually have a preferred means of acquiring new skills, or getting help with a specific problem. Reference manuals, tutorials, recipes, best practice guides and experience reports all have their role. As do training courses, mentoring, pair programming and code reviews.</para>
-
-<para>This book attempts to add to the steadily growing canon of reference documentation relating to Linked Data. Linked Data is a means of publishing "web-native" data using standards like HTTP, URIs and RDF. The book adopts a tried and tested means of communicating knowledge and experience in software development: the design pattern. The book is organized as a pattern catalogue that covers a range of different areas from the design of web scale identifiers through to application development patterns. The intent is to create a ready reference that will be useful for both the beginner and the experienced practioner alike. It's also intended to grow and mature in line with the practitioner community.</para>
-
+    <para>There are many ways to help spread the adoption of a technology, and to share skills and experience amongst a community of practitioners. Different approaches work well for communicating different kinds of knowledge. And we all individually have a preferred means of acquiring new skills, or getting help with a specific problem. Reference manuals, tutorials, recipes, best practice guides and experience reports all have their role. As do training courses, mentoring, pair programming and code reviews.</para>
+    <para>This book attempts to add to the steadily growing canon of reference documentation relating to Linked Data. Linked Data is a means of publishing "web-native" data using standards like HTTP, URIs and RDF. The book adopts a tried and tested means of communicating knowledge and experience in software development: the design pattern. The book is organized as a pattern catalogue that covers a range of different areas from the design of web scale identifiers through to application development patterns. The intent is to create a ready reference that will be useful for both the beginner and the experienced practioner alike. It's also intended to grow and mature in line with the practitioner community.</para>
   </abstract>
   </chapterinfo>
 
@@ -17,9 +15,21 @@
 		<para>Design patterns have a number of benefits:</para>
 
 		<itemizedlist>
-		<listitem>Patterns have a well-defined structure that encourages focus on the essential knowledge being communicated. This makes them accessible and easy to consume.</listitem>
-		<listitem>Patterns encourage discussion of related and complementary approaches. Design decisions are rarely clear cut. A focus on specifics is useful for understanding trade-offs</listitem>
-		<listitem>Patterns provide a name for a particular design decision or solution. Collectively they build a lexicon that encourages clearer communication between practitioners</listitem>
+			<listitem>
+				<para>Patterns have a well-defined structure that encourages focus on the
+					essential knowledge being communicated. This makes them accessible and easy
+					to consume.</para>
+			</listitem>
+			<listitem>
+				<para>Patterns encourage discussion of related and complementary approaches.
+					Design decisions are rarely clear cut. A focus on specifics is useful for
+					understanding trade-offs</para>
+			</listitem>
+			<listitem>
+				<para>Patterns provide a name for a particular design decision or solution.
+					Collectively they build a lexicon that encourages clearer communication
+					between practitioners</para>
+			</listitem>
 		</itemizedlist>
 
 		<para>The authors have successfully applied design patterns in their software development activities. The approach seemed well suited to teasing out some of the experiences and lessons they have learnt through working with Semantic Web technologies; the rigour of a pattern approach also helped the authoring.</para>
@@ -28,7 +38,7 @@
 
 	<sect2><title>...And Why a Book? Why Not a Blog or a Wiki?</title>
 
-	<para>This is something that we wrestled with for a long time. Our goal is that this book should ultimately reflective the collective experience of the Linked Data community and we want to encourage participation and feedback. You can use the <ulink url="http://dataincubator.org">dataincubator.org</ulink> mailing list to discuss the book and debates its contents. We're also hoping to include your submissions, corrections and edits in the future. </para>
+	<para>This is something that we wrestled with for a long time. Our goal is that this book should ultimately reflective the collective experience of the Linked Data community and we want to encourage participation and feedback. You can use the <ulink url="http://dataincubator.org">dataincubator.org</ulink> mailing list to discuss the book and debate its contents. We're also hoping to include your submissions, corrections and edits in the future. </para>
 	<para>But while we want this book to grow as a participatory activity we (particularly Leigh) felt that an editorial layer would be a useful addition to this process. Helping firm up the naming, communication and organisation of the pattern catalogue as it develops.</para>
 	<para>We also encourage the community, if they find a design pattern approach to be useful, to publish and share their own patterns using whatever mechanism feels right for them. A thousand flowers, etc. The <ulink url="http://OntologyDesignPatterns.org">OntologyDesignPatterns.org</ulink> wiki provides one forum for helping to contribute to this effort.</para>
 	</sect2>
@@ -43,10 +53,11 @@
 		<para>The catalogue has been broken down into a number of separate chapters. Each chapter collects together patterns that have a common theme.</para>
 
 		<itemizedlist>
-		<listitem><xref linkend="identifier-patterns"/></listitem>
-		<listitem><xref linkend="modelling-patterns"/></listitem>
-		<listitem><xref linkend="publishing-patterns"/></listitem>
-		<listitem><xref linkend="application-patterns"/></listitem>
+			<listitem><para><xref linkend="identifier-patterns"/></para></listitem>
+			<listitem><para><xref linkend="modelling-patterns"/></para></listitem>
+			<listitem><para><xref linkend="publishing-patterns"/></para></listitem>
+			<listitem><para><xref linkend="data-management-patterns"/></para></listitem>
+			<listitem><para><xref linkend="application-patterns"/></para></listitem>
 		</itemizedlist>
 
 		<para>The catalogue also includes a few patterns that arguably aren't patterns at all, they're similar features of the RDF model; <link linkend="typed-literal">Typed Literal</link> for example. We decided to include these for the sake of helping to document best practices. There are plenty of examples and material on some of these basic features but they're often overlooked by both experienced and new practitioners. So we've opted to document these as patterns to help draw attention to them.</para>
@@ -55,9 +66,9 @@
     <sect2>
 		<title>Examples</title>
 
-	<para>The pattern catalogue includes a number of examples. Snippets of code, data, or queries that help to illustrate a specific pattern. Code examples are shown in this font.</para>
+	<para>The pattern catalogue includes a number of examples. Snippets of code, data, or queries that help to illustrate a specific pattern. Code examples are shown in <code>this</code> font.</para>
 
-	<para>Where we should examples of RDF data, we have used the <ulink url="http://www.w3.org/TeamSubmission/turtle/">Turtle</ulink> syntax for RDF because its more concise and readable than RDF/XML. We have preferred to use prefixed names for standard RDF properties and classes but, for clarity, have not always included the declarations of these prefixes in the examples. This allows the example to focus on the particular usage being demonstrated.</para>
+    <para>Where we show examples of RDF data, we have used the <ulink url="https://www.w3.org/TR/turtle/">Turtle</ulink> syntax for RDF because its more concise and readable than RDF/XML. We have preferred to use prefixed names for standard RDF properties and classes but, for clarity, have not always included the declarations of these prefixes in the examples. This allows the example to focus on the particular usage being demonstrated.</para>
 
 	<para>Unless otherwise stated, assume that when you're looking at some Turtle we've declared the following prefixes:</para>
 
@@ -76,7 +87,7 @@
 </programlisting>
 
 	<para>In the <link linkend="data-management-patterns">Data Management Patterns</link> section of the book a number of the examples use the 
-<ulink url="http://www4.wiwiss.fu-berlin.de/bizer/trig/">TRiG</ulink> syntax, which is an extension of Turtle that supports Named Graphs.</para>
+		<ulink url="http://www.w3.org/TR/trig/">TriG</ulink> syntax, which is an extension of Turtle that supports Named Graphs.</para>
 	</sect2>
 
   </sect1>

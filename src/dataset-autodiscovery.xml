@@ -5,7 +5,7 @@
   </para>
 
   <sect2><title>Context</title>
-  <para>A Linked Data application might apply the <link linkend="follow-your-nose">Follow Your Nose</link> pattern to discover additional data about resources in an RDF graph. But the application may need to discovert additional metadata about the dataset to which the resource belongs, such as its license. The application may also need access to additional facilities, such as a SPARQL endpoint, in order to extract any additional data it requires.</para>
+  <para>A Linked Data application might apply the <link linkend="follow-your-nose">Follow Your Nose</link> pattern to discover additional data about resources in an RDF graph. But the application may need to discover additional metadata about the dataset to which the resource belongs, such as its license. The application may also need access to additional facilities, such as a SPARQL endpoint, in order to extract any additional data it requires.</para>
   </sect2>
 
   <sect2><title>Solution</title>

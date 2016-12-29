@@ -16,16 +16,16 @@
 <programlisting>
 <![CDATA[
 #Define a URI for different forms of shipping codes
-<http:www.example.org/datatype/FedexShippingCode> 
+<http://www.example.org/datatype/FedexShippingCode> 
   rdfs:label "Fedex Shipping Code".
-<http:www.example.org/datatype/UPSShippingCode> 
+<http://www.example.org/datatype/UPSShippingCode> 
   rdfs:label "UPS Shipping Code".
 
 #Indicate the form of shipping code with a Typed Literal
-_:delivery1 
+ex:delivery1 
   ex:shippingCode "1234-568"^^<http:www.example.org/datatype/FedexShippingCode>.
 
-_:delivery1 
+ex:delivery1 
   ex:shippingCode "abcd/zx"^^<http:www.example.org/datatype/UPSShippingCode>.
 ]]>
 </programlisting>
@@ -37,13 +37,13 @@ _:delivery1
   <para>Note that a typed literal with a custom datatype can also be modelled as a sub-property. Continuing the above example, instead of defining a new type for each shipping code, the model could have instead been structured as:</para>
 <programlisting>
 <![CDATA[
-<http:www.example.org/def/post/fedexShippingCode> 
+<http://www.example.org/def/post/fedexShippingCode> 
   a rdfs:Property;
   rdfs:subPropertyOf <http:www.example.org/def/post/shippingCode> 
   rdfs:label "Fedex Shipping Code".
 
 #Use the derived property:
-_:delivery1 
+ex:delivery1 
   ex:fedexShippingCode "1234-568".
 ]]>
 </programlisting>
@@ -62,7 +62,7 @@ _:delivery1
   </itemizedlist>
   <para>With this in mind the general recommendation is to:</para>
   <itemizedlist>
-   <listitem>Use a custom datatype to label particular types of structured value that share a common lexical form. These values may be associated with a broad range of different properties. Processing applications may want to implement a common set type conversions or display options for the values.</listitem>
+   <listitem>Use a custom datatype to label particular types of structured value that share a common lexical form. These values may be associated with a broad range of different properties. Processing applications may want to implement a common set of type conversions or display options for the values.</listitem>
    <listitem>Use a sub-property in all other cases</listitem>
   </itemizedlist>
   <para>Note that these options aren't always mutually exclusive. It might be useful in some scenarios to have an explicit property for associating a general class of code, identifier, or other <link linkend="literal-keys">Literal Key</link> with a resource, but also assign a specific datatype to the identifier as a cue for applications and reasoners</para>

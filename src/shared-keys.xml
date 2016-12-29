@@ -34,7 +34,7 @@ The Shared Keys pattern is best suited to situations where the shared identifier
 
   <sect2><title>Related</title>
   <itemizedlist>
-  <listitem><link linkend="patterned-uris">Patterned URIs</link>></listitem>
+  <listitem><link linkend="patterned-uris">Patterned URIs</link></listitem>
   <listitem><link linkend="natural-keys">Natural Keys</link></listitem>
   </itemizedlist>
   </sect2>
