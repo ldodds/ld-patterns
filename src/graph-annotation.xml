@@ -34,8 +34,8 @@
 #Metadata graph
 <http://app.example.org/graphs> { 
   #Description of a named graph in this dataset
-  <http://app.example.org/graphs/my-database> dct:source <http://app.example.org/database/customers>
-  <http://app.example.org/graphs/my-database> dct:created "2012-05-28"^^xsd:date.
+  <http://app.example.org/graphs/my-database> dcterms:source <http://app.example.org/database/customers>
+  <http://app.example.org/graphs/my-database> dcterms:created "2012-05-28"^^xsd:date.
   <http://app.example.org/graphs/my-database> foaf:generatorAgent <http://app.example.org/converter/0.0.5>.
 
   ...descriptions of other graphs...
@@ -61,8 +61,8 @@
 #"Parallel" metadata graph
 <http://app.example.org/metadata-graphs/my-database> { 
   #Description of  named graph in this dataset
-  <http://app.example.org/graphs/my-database> dct:source <http://app.example.org/database/customers>
-  <http://app.example.org/graphs/my-database> dct:created "2012-05-28"^^xsd:date.
+  <http://app.example.org/graphs/my-database> dcterms:source <http://app.example.org/database/customers>
+  <http://app.example.org/graphs/my-database> dcterms:created "2012-05-28"^^xsd:date.
   <http://app.example.org/graphs/my-database> foaf:generatorAgent <http://app.example.org/converter/0.0.5>.
 }
 ...other named graphs
@@ -79,7 +79,7 @@
   #statements contained in the document, about itself
   <http://example.org/person/joe.rdf> foaf:primaryTopic <http://example.org/person/joe>.
   #date the FOAF document was created
-  <http://example.org/person/joe.rdf> dct:created "2010-06-01".
+  <http://example.org/person/joe.rdf> dcterms:created "2010-06-01".
 
   <http://example.org/person/joe> foaf:name "Joe Bloggs".
 }
@@ -87,9 +87,9 @@
 #Metadata graph, describing results of crawl
 <http://app.example.org/graphs/> { 
     #date the named graph was created
-    <http://example.org/person/joe.rdf> dct:created "2012-05-28".
+    <http://example.org/person/joe.rdf> dcterms:created "2012-05-28".
 }]]></programlisting>  
-  <para>In the above example there are two <code>dct:created</code> properties associated with the resource <code>http://example.org/person/joe.rdf</code>. That document is a FOAF description which describes its primary topic and the date it was generated. The second date was added by a hypothetical web crawler that captured the date it stored that information in a named graph. It is possible for a SPARQL query applied to the <link linkend="union-graph">union graph</link> for this dataset to return conflicting information, suggesting that the use of the source URL as a graph identifier is a poor choice. A better alternative would be to add some indirection:</para>
+  <para>In the above example there are two <code>dcterms:created</code> properties associated with the resource <code>http://example.org/person/joe.rdf</code>. That document is a FOAF description which describes its primary topic and the date it was generated. The second date was added by a hypothetical web crawler that captured the date it stored that information in a named graph. It is possible for a SPARQL query applied to the <link linkend="union-graph">union graph</link> for this dataset to return conflicting information, suggesting that the use of the source URL as a graph identifier is a poor choice. A better alternative would be to add some indirection:</para>
 <programlisting><![CDATA[
 @prefix ex: <http://www.example.org/> .
 
@@ -98,7 +98,7 @@
   #statements contained in the document, about itself
   <http://example.org/person/joe.rdf> foaf:primaryTopic <http://example.org/person/joe>.
   #date the FOAF document was created
-  <http://example.org/person/joe.rdf> dct:created "2010-06-01".
+  <http://example.org/person/joe.rdf> dcterms:created "2010-06-01".
 
   <http://example.org/person/joe> foaf:name "Joe Bloggs".
 }
@@ -106,11 +106,11 @@
 #Metadata graph, describing results of crawl
 <http://app.example.org/graphs> { 
     #date the named graph was created
-    <http://app.example.org/graphs?source=http://example.org/person/joe.rdf> dct:created "2012-05-28".
+    <http://app.example.org/graphs?source=http://example.org/person/joe.rdf> dcterms:created "2012-05-28".
     #source of the graph
-	<http://app.example.org/graphs?source=http://example.org/person/joe.rdf> dct:source <http://example.org/person/joe.rdf>.
+	<http://app.example.org/graphs?source=http://example.org/person/joe.rdf> dcterms:source <http://example.org/person/joe.rdf>.
 }]]></programlisting>  
-  <para>In the revised example a new URI is associated with the results of the web crawl. The web crawler then uses this URI to record the required metadata. By adding an <code>dct:source</code> property (or similar) it is still possible to identify which named graph was derived from which source URL. As can be seen a <link linkend="patterned-uris">Patterned URI</link> is used to generate the graph identifier, giving a predictable structure to the store.
+  <para>In the revised example a new URI is associated with the results of the web crawl. The web crawler then uses this URI to record the required metadata. By adding a <code>dcterms:source</code> property (or similar) it is still possible to identify which named graph was derived from which source URL. As can be seen a <link linkend="patterned-uris">Patterned URI</link> is used to generate the graph identifier, giving a predictable structure to the store.
   </para>
   </sect2>
 

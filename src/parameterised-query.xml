@@ -19,12 +19,12 @@
   <sect2><title>Discussion</title>
   <para>This pattern is well understood in the SQL database world: Prepared Statements have been in use for many years. SPARQL processors are now starting to add similar features, which simplifies working with queries from application code.</para>
   <para>At present the SPARQL Protocol does not support specification of initial bindings as additional query string parameters. However some Linked Data publishing platforms have added support for parameterised queries, as extensions to the core protocol, allowing additional query parameters to be automatically injected into the query prior to execution. This makes it simpler for users to share queries and adjust their parameters.</para>
-  <para>SPARQL 1.1 provides <ulink linkend="http://www.w3.org/TR/sparql11-query/#bindings">a <code>BINDINGS</code> keyword</ulink> which can be used to declare that certain variables should be injected into a graph pattern. This was added primarily to support federated query use cases, but can also be used to support some parameterisation of queries.</para>
+  <para>SPARQL 1.1 provides <ulink linkend="http://www.w3.org/TR/sparql11-query/#inline-data">a <code>VALUES</code> keyword</ulink> which can be used to declare that certain variables should be injected into a graph pattern. This was added primarily to support federated query use cases, but can also be used to support some parameterisation of queries.</para>
   <para>A map of named-value pairs which describe some initial query bindings can also be interpolated directly into a query by looking for appropriately named query variables. This interpolation has been done in several ways:
 	<itemizedlist>
 		<listitem>Using some additional custom syntax to mark up the variable, e.g. <code>%{var}</code>. This means that the query is no longer valid SPARQL into variables have been substituted</listitem>
-		<listitem>By using the fact that SPARQL provides to naming syntaxes for variables, and defining <code>$var</code> to be those that are bound before execution and <code>?var</code> those that are bound during execution (or vice versa). This relies on local convention.</listitem>
-		<listitem>By binding any query variable using any valid SPARQL syntax. The downside to this option is that additional external context is required to identify those variables that must be bound prior to execution. The other options allow these to be identified from just the query itself, although in practice it is often useful to be able to known the expect type, format or legal values for a parameter which will require additional configuration anyway.</listitem>
+		<listitem>By using the fact that SPARQL provides two naming syntaxes for variables, and defining <code>$var</code> to be those that are bound before execution and <code>?var</code> those that are bound during execution (or vice versa). This relies on local convention.</listitem>
+		<listitem>By binding any query variable using any valid SPARQL syntax. The downside to this option is that additional external context is required to identify those variables that must be bound prior to execution. The other options allow these to be identified from just the query itself, although in practice it is often useful to be able to know the expected type, format or legal values for a parameter which will require additional configuration anyway.</listitem>
 	</itemizedlist></para>
 	<para>Parameterised Queries are a core feature of the <link linkend="named-query">Named Query</link> pattern.</para>
   </sect2>
@@ -37,7 +37,7 @@
 
   <sect2><title>Further Reading</title>
   <itemizedlist>
-  <listitem><ulink linkend="http://www.w3.org/TR/sparql11-query/#bindings">SPARQL 1.1. Bindings</ulink></listitem>
+  <listitem><ulink linkend="http://www.w3.org/TR/sparql11-query/#inline-data">SPARQL 1.1. VALUES: Providing inline data</ulink></listitem>
   </itemizedlist>
   </sect2>
 </sect1>

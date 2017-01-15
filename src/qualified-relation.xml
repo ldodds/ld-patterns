@@ -5,7 +5,7 @@
   </para>
 
   <sect2><title>Context</title>
-  <para>In some cases relationships need to be qualified or annotated in some way. There are a number of different use cases that reuired this capability. E.g. to indicate the date when a specific relationship was made, or to indicate its source, or perhaps associate it with a probability or other similar qualifier. RDF only allows binary relations between resources, so how can these additional qualified relations be expressed?</para>
+  <para>In some cases relationships need to be qualified or annotated in some way. There are a number of different use cases that require this capability. E.g. to indicate the date when a specific relationship was made, or to indicate its source, or perhaps associate it with a probability or other similar qualifier. RDF only allows binary relations between resources, so how can these additional qualified relations be expressed?</para>
   </sect2>
 
   <sect2><title>Solution</title>

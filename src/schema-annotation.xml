@@ -15,10 +15,10 @@
   <sect2><title>Example(s)</title>
   <programlisting>
    <![CDATA[
-ex:RequiredProperty a rdfs:Property;
+ex:RequiredProperty rdfs:subClassOf rdf:Property;
    rdfs:comment "must be completed on data entry form".
 
-ex:IgnoredProperty a rdfs:Property;
+ex:IgnoredProperty rdfs:subClassOf rdf:Property;
    rdfs:comment "never shown when displaying data".
 
 <http://xmlns.com/foaf/0.1/name>

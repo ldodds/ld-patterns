@@ -5,7 +5,7 @@
   </para>
 
   <sect2><title>Context</title>
-  <para>When generating a URI for an identifier we may not always have a simple numeric <link linkend="natural-keys">Natural Key</link> 
+  <para>When generating a URI for an identifier we may not always have a simple alphanumeric <link linkend="natural-keys">Natural Key</link> 
   for a resource. In some cases, e.g. for documents, keywords, categories, we may only have a title or name.</para>
   </sect2>
 
