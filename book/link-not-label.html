@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Link Not Label</title><link rel="stylesheet" href="../css/style.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.75.2" /><link rel="home" href="index.html" title="Linked Data Patterns" /><link rel="up" href="modelling-patterns.html" title="Chapter 3. Modelling Patterns" /><link rel="prev" href="label-everything.html" title="Label Everything" /><link rel="next" href="multi-lingual-literal.html" title="Multi-Lingual Literal" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Link Not Label</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="label-everything.html">Prev</a> </td><th width="60%" align="center">Chapter 3. Modelling Patterns</th><td width="20%" align="right"> <a accesskey="n" href="multi-lingual-literal.html">Next</a></td></tr></table><hr /></div><div class="sect1" title="Link Not Label"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="link-not-label"></a>Link Not Label</h2></div></div></div><p> 
+   <span class="emphasis"><em>How do we model a dataset to maximise benefits of a graph based model?</em></span>
+  </p><div class="sect2" title="Context"><div class="titlepage"><div><div><h3 class="title"><a id="id2611449"></a>Context</h3></div></div></div><p>Most datasets are centred around a few core resources types that are central to that dataset. For example a social network 
+  dataset would be centred on people, groups and organizations, whereas a publishing dataset would be centred on authors, 
+  publications and publishers.</p><p>However every dataset typically has some additional resource types that are less "central". E.g areas 
+  or topics of interest, spoken or print languages, publication formats, etc. Often these resources are over-looked during 
+  modelling and are often only represented as simple literal values. This can make it less efficient to query a dataset, e.g. to group resources 
+  based on shared characteristics (e.g. everyone with same interests, all hardback books). It can also limit the 
+  <a class="link" href="annotation.html" title="Annotation">annotate</a> these 
+  aspects of a dataset, e.g. in order to add <a class="link" href="equivalence-links.html" title="Equivalence Links">equivalence links</a>.</p><p>Many common modelling approaches or industry standard models often re-inforce a less expressive modelling approach. For 
+  example many publishing and library standards, while encouraging use of controlled terms and authority files, focus largely on 
+  publications as the only important entity in a data model, leaving subject categories and authors as little more than labels associated 
+  with a work.</p></div><div class="sect2" title="Solution"><div class="titlepage"><div><div><h3 class="title"><a id="id2611505"></a>Solution</h3></div></div></div><p>Ensure that all resources in a dataset are modelled as resources rather than simple literal values. Relate resources together to 
+  create a richer graph model. Use the literal values as the labels of the new resources.</p><p>A good approach is to look for any controlled vocabularies, keywords, tags, or annotations and dimensions in a dataset and 
+  model them as resources. Even structured literal values like dates might be more usefully modelled as resources.</p></div><div class="sect2" title="Example(s)"><div class="titlepage"><div><div><h3 class="title"><a id="id2611524"></a>Example(s)</h3></div></div></div><p>Example of potential resources that might get overlooked:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">Languages</li><li class="listitem">Country codes</li><li class="listitem">Tags, categories, or subject headings</li><li class="listitem">Gender</li><li class="listitem">Genres</li><li class="listitem">Formats</li></ul></div><p>A simple example:</p><pre class="programlisting">
+
+#Rather than this:
+&lt;http://www.example.org/book/1&gt;
+  dc:format "Hardback";
+  dc:lang "en"
+  dc:subject "RDF", "SPARQL".
+  
+#Use a richer model:
+&lt;http://www.example.org/book/1&gt;
+  dcterms:format &lt;http://example.org/formats/hardback&gt;;
+  dcterms:lang &lt;http://www.lingvoj.org/lingvo/en&gt;;
+  dcterms:subject &lt;http://example.org/category/rdf&gt;;
+  dcterms:subject &lt;http://example.org/category/sparql&gt;.
+  
+&lt;http://example.org/formats/hardback&gt;
+  rdfs:label "Hardback".
+  
+&lt;http://example.org/category/rdf&gt;
+  rdfs:label "RDF".  
+  
+&lt;http://example.org/category/sparql&gt;
+  rdfs:label "SPARQL".
+  
+#Categories could later be related to other sources
+&lt;http://example.org/category/rdf&gt;
+   owl:sameAs &lt;http://id.loc.gov/authorities/sh2003010124#concept&gt;;
+   owl:sameAs &lt;http://rdf.freebase.com/ns/authority.us.gov.loc.sh.sh2003010124&gt;.  
+
+</pre></div><div class="sect2" title="Discussion"><div class="titlepage"><div><div><h3 class="title"><a id="id2612221"></a>Discussion</h3></div></div></div><p>Creating a rich graph of relationships within a dataset will yield more flexibility and value from adopting Linked Data.</p><p>For example, as RDF triple stores are optimized for storing and querying relationships and graph patterns, creating resources 
+  for common dimensions in a dataset will allow for faster and more flexible querying. By representing these dimensions are resources in 
+  their own right, then they can be more easily annotated, e.g. to qualify them with additional data, or relate them to external sources.</p><p>In many cases existing resources in publically available datasets can be used instead of creating new URIs. By using resources, 
+  and reusing identifiers, it becomes easier to correlate and traverse different datasets. For example it becomes possible to 
+  draw in external data to enrich an existing application, e.g. an author profile or related works in another collection.</p></div><div class="sect2" title="Related"><div class="titlepage"><div><div><h3 class="title"><a id="id2612280"></a>Related</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><a class="link" href="annotation.html" title="Annotation">Annotation</a></li><li class="listitem"><a class="link" href="equivalence-links.html" title="Equivalence Links">Equivalence Links</a></li></ul></div></div><div class="sect2" title="Further Reading"><div class="titlepage"><div><div><h3 class="title"><a id="id2612301"></a>Further Reading</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><a class="ulink" href="" target="_top">Why Resources in Linked Data are Good</a></li></ul></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="label-everything.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="modelling-patterns.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="multi-lingual-literal.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Label Everything </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Multi-Lingual Literal</td></tr></table></div></body></html>

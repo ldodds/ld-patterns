@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Smushing</title><link rel="stylesheet" href="../css/style.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.75.2" /><link rel="home" href="index.html" title="Linked Data Patterns" /><link rel="up" href="application-patterns.html" title="Chapter 6. Application Patterns" /><link rel="prev" href="schema-annotation.html" title="Schema Annotation" /><link rel="next" href="transformation-query.html" title="Transformation Query" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Smushing</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="schema-annotation.html">Prev</a> </td><th width="60%" align="center">Chapter 6. Application Patterns</th><td width="20%" align="right"> <a accesskey="n" href="transformation-query.html">Next</a></td></tr></table><hr /></div><div class="sect1" title="Smushing"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="smushing"></a>Smushing</h2></div></div></div><p> 
+   <span class="emphasis"><em>How do we merge data about resources that may not be consistently identified?</em></span>
+  </p><div class="sect2" title="Context"><div class="titlepage"><div><div><h3 class="title"><a id="id2631299"></a>Context</h3></div></div></div><p>It will often be the case that different data publishers have used different identifiers for the same resource. In some cases 
+  there may be direct <a class="link" href="equivalence-links.html" title="Equivalence Links">Equivalence Links</a> between resources. In others their equivalence might 
+  be inferred based on other data, e.g. common properties.</p><p>How can we merge statements made about these distinct resources into a single description?</p></div><div class="sect2" title="Solution"><div class="titlepage"><div><div><h3 class="title"><a id="id2631089"></a>Solution</h3></div></div></div><p>Apply the technique of "smushing" to manipulate an RDF graph containing the descriptions of each of the resources. Broadly a smushing 
+  algorithm will consist of the following steps:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">Decide on the URI for the resource that will hold the final description, i.e. the <span class="emphasis"><em>target resource</em></span> -- this could be one randomly selected from 
+  available URIs, or one from a local dataset</li><li class="listitem">Identify all <span class="emphasis"><em>equivalent resources</em></span> -- i.e. by finding <a class="link" href="equivalence-links.html" title="Equivalence Links">Equivalence Links</a>
+  such as <code class="code">owl:sameAs</code> statements, or by property values that indicate that two resources are similar 
+  (e.g. Inverse Functional Properties, see below).</li><li class="listitem">Iterate over the <span class="emphasis"><em>equivalent resources</em></span> and for each RDF statement for which it is the <span class="emphasis"><em>subject</em></span>, assert a new 
+  statement with the same predicate and object but using the <span class="emphasis"><em>target resource</em></span> as the subject</li><li class="listitem">Iterate over the <span class="emphasis"><em>equivalent resources</em></span> and for each RDF statement for which it is the <span class="emphasis"><em>object</em></span>, assert a new 
+  statement with the same subject and predicate but using the <span class="emphasis"><em>target resource</em></span> as the object</li></ul></div><p>The end result will be an modified RDF graph with all properties of the <span class="emphasis"><em>equivalent resources</em></span> being "copied" to the 
+  <span class="emphasis"><em>target resource</em></span>. In addition, any references to the <span class="emphasis"><em>equivalent resources</em></span> will also be made to the target 
+  resource</p><p>By applying this to all resources in a graph, the available data can be normalized into a consistent set of descriptions based on a known set of 
+  resources. An application may then generate a <a class="link" href="bounded-description.html" title="Bounded Description">Bounded Description</a> of any resource and guarantee that it 
+  will include all available data</p></div><div class="sect2" title="Example(s)"><div class="titlepage"><div><div><h3 class="title"><a id="id2631844"></a>Example(s)</h3></div></div></div><p>Assume we start with the following graph, which contains two equivalent resources, as defined by 
+  an <code class="code">owl:sameAs</code> link.</p><pre class="programlisting">
+
+&lt;http://example.com/product/6&gt;
+  rdfs:label "Camera";
+  owl:sameAs &lt;http://example.org/cameras/10&gt;.
+
+&lt;http://example.org/cameras/10&gt;
+  ex:manufacturer &lt;http://example.org/company/5&gt;.
+
+&lt;http://example.org/company/5&gt;.
+  ex:manufactured &lt;http://example.org/cameras/10&gt;.
+
+
+</pre><p>Assuming we want to collate all data around resources from <code class="code">example.com</code>, we can apply smushing to create the 
+  following graph:</p><pre class="programlisting">
+
+&lt;http://example.com/product/6&gt;
+  rdfs:label "Camera";
+  owl:sameAs &lt;http://example.org/cameras/10&gt;;  
+  ex:manufacturer &lt;http://example.org/company/5&gt;.
+  
+&lt;http://example.org/cameras/10&gt;
+  ex:manufacturer &lt;http://example.org/company/5&gt;.
+
+&lt;http://example.org/company/5&gt;.
+  ex:manufactured &lt;http://example.org/cameras/10&gt;.
+  ex:manufactured &lt;http://example.com/product/6&gt;.
+
+</pre><p>We can also tidy up the graph to remove statements about the equivalent resources, leaving:</p><pre class="programlisting">
+
+&lt;http://example.com/product/6&gt;
+  rdfs:label "Camera";
+  owl:sameAs &lt;http://example.org/cameras/10&gt;;  
+  ex:manufacturer &lt;http://example.org/company/5&gt;.
+  
+&lt;http://example.org/company/5&gt;.
+  ex:manufactured &lt;http://example.com/product/6&gt;.
+
+</pre></div><div class="sect2" title="Discussion"><div class="titlepage"><div><div><h3 class="title"><a id="id2631908"></a>Discussion</h3></div></div></div><p>Smushing is essentially a process of inference: by using available data we create new statements. Any OWL reasoner will carry out 
+  this kind of data merging automatically based on the available data and schema/ontology without the need for custom code. Applications that 
+  are using a triple store that applies inferencing by default will not need to use this approach. However for applications that don't need a 
+  full inferencing engine, or need only lightweight merging of data, then a custom smushing algorithm can achieve the same goal.</p><p>There are several different variations on algorithm described above. For example, applications might vary in how they nominate the 
+  <span class="emphasis"><em>target resource</em></span>. Typically though this will be based on a preferred URI. Algorithms can also be divided into those that 
+  preserve the original statements, e.g. so that the <span class="emphasis"><em>equivalent resources</em></span> remain in the source RDF graph, or whether their statements 
+  are removed from the graph to leave only a normalized description. Applications could also use <a class="link" href="named-graphs.html" title="Named Graph">Named Graphs</a> to 
+  separately stored the "smushed" view of the data, preserving the original data in another graph or triple store.</p><p>As noted above there are also several ways to identify equivalent resources. <a class="link" href="equivalence-links.html" title="Equivalence Links">Equivalence Links</a> are an obvious 
+  approach. Other cues can also be used including the use of <a class="ulink" href="" target="_top">Inverse Functional Properties</a>. 
+  An inverse functional property is simply a property whose value uniquely identifies a resource, such as <a class="link" href="literal-keys.html" title="Literal Keys">Literal Keys</a>.</p><p>An application is also free to apply it's own rules about what consistutes "equivalence". For example an application may decide to merge together resources 
+  with similar property values, even if those properties are not declared as Inverse Functional Properties. This allows for local customization of smushing 
+  rules, but runs the risk of generating false positives. One way to apply these custom rules is to use local <a class="link" href="schema-annotation.html" title="Schema Annotation">Schema Annotations</a> to 
+  declare specific properties as being equivalent. This has the benefit of working with both custom code and OWL reasoners.</p><p>Smushing is often used to normalize an RDF graph resulting from a <a class="link" href="follow-your-nose.html" title="Follow Your Nose">Follow Your Nose</a> approach to 
+  data discovery</p></div><div class="sect2" title="Related"><div class="titlepage"><div><div><h3 class="title"><a id="id2632013"></a>Related</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><a class="link" href="equivalence-links.html" title="Equivalence Links">Equivalence Links</a></li><li class="listitem"><a class="link" href="follow-your-nose.html" title="Follow Your Nose">Follow Your Nose</a></li></ul></div></div><div class="sect2" title="Further Reading"><div class="titlepage"><div><div><h3 class="title"><a id="id2632034"></a>Further Reading</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><a class="ulink" href="" target="_top">Smushing</a></li><li class="listitem"><a class="ulink" href="" target="_top">RDF Smushing</a></li><li class="listitem"><a class="ulink" href="" target="_top">Smushing Algorithms</a></li></ul></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="schema-annotation.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="application-patterns.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="transformation-query.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Schema Annotation </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Transformation Query</td></tr></table></div></body></html>
